@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OnSale.Web.Data;
 
 namespace OnSale.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200817225655_AddUserEntities")]
+    partial class AddUserEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -211,31 +213,6 @@ namespace OnSale.Web.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("OnSale.Common.Entities.OrderDetail", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("OrderId");
-
-                    b.Property<decimal>("Price");
-
-                    b.Property<int?>("ProductId");
-
-                    b.Property<float>("Quantity");
-
-                    b.Property<string>("Remarks");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("OrderDetails");
-                });
-
             modelBuilder.Entity("OnSale.Common.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -281,31 +258,6 @@ namespace OnSale.Web.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
-                });
-
-            modelBuilder.Entity("OnSale.Web.Data.Entities.Order", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("Date");
-
-                    b.Property<DateTime?>("DateConfirmed");
-
-                    b.Property<DateTime?>("DateSent");
-
-                    b.Property<int>("OrderStatus");
-
-                    b.Property<string>("Remarks");
-
-                    b.Property<string>("UserId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("OnSale.Web.Data.Entities.User", b =>
@@ -441,17 +393,6 @@ namespace OnSale.Web.Migrations
                         .HasForeignKey("CountryId");
                 });
 
-            modelBuilder.Entity("OnSale.Common.Entities.OrderDetail", b =>
-                {
-                    b.HasOne("OnSale.Web.Data.Entities.Order")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("OrderId");
-
-                    b.HasOne("OnSale.Common.Entities.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
-                });
-
             modelBuilder.Entity("OnSale.Common.Entities.Product", b =>
                 {
                     b.HasOne("OnSale.Common.Entities.Category", "Category")
@@ -464,13 +405,6 @@ namespace OnSale.Web.Migrations
                     b.HasOne("OnSale.Common.Entities.Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId");
-                });
-
-            modelBuilder.Entity("OnSale.Web.Data.Entities.Order", b =>
-                {
-                    b.HasOne("OnSale.Web.Data.Entities.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("OnSale.Web.Data.Entities.User", b =>
