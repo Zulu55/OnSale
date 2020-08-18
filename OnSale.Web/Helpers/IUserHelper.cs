@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using OnSale.Web.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using OnSale.Web.Models;
 using System.Threading.Tasks;
 
 namespace OnSale.Web.Helpers
@@ -18,6 +16,9 @@ namespace OnSale.Web.Helpers
         Task AddUserToRoleAsync(User user, string roleName);
 
         Task<bool> IsUserInRoleAsync(User user, string roleName);
-    }
 
+        Task<SignInResult> LoginAsync(LoginViewModel model);
+
+        Task LogoutAsync();
+    }
 }
