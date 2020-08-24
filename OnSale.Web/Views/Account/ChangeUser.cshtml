@@ -1,0 +1,83 @@
+﻿@model OnSale.Web.Models.EditUserViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="ChangeUser" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ImageId" />
+
+            <partial name="_User" />
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="ChangePassword" class="btn btn-warning">Change Password</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <img src="@Model.ImageFullPath" style="width:250px;height:250px;border-radius:50%" />
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#CountryId").change(function () {
+                $("#DepartmentId").empty();
+                $("#DepartmentId").append('<option value="0">[Select a department...]</option>');
+                $("#CityId").empty();
+                $("#CityId").append('<option value="0">[Select a city...]</option>');
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("GetDepartments")',
+                    dataType: 'json',
+                    data: { countryId: $("#CountryId").val() },
+                    success: function (subcategories) {
+                        $.each(subcategories, function (i, department) {
+                            debugger;
+                            $("#DepartmentId").append('<option value="'
+                                + department.id + '">'
+                                + department.name + '</option>');
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Failed to retrieve departments.' + ex);
+                    }
+                });
+                return false;
+            })
+
+            $("#DepartmentId").change(function () {
+                $("#CityId").empty();
+                $("#CityId").append('<option value="0">[Select a city...]</option>');
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("GetCities")',
+                    dataType: 'json',
+                    data: { departmentId: $("#DepartmentId").val() },
+                    success: function (cities) {
+                        $.each(cities, function (i, city) {
+                            debugger;
+                            $("#CityId").append('<option value="'
+                                + city.id + '">'
+                                + city.name + '</option>');
+                        });
+                    },
+                    error: function (ex) {
+                        alert('Failed to retrieve cities.' + ex);
+                    }
+                });
+                return false;
+            })
+        });
+    </script>
+}
