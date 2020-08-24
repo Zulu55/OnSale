@@ -52,5 +52,10 @@ namespace OnSale.Web.Controllers
             await _userHelper.LogoutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult NotAuthorized()
+        {
+            return View();
+        }
     }
 }
