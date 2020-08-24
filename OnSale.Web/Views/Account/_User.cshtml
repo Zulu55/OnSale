@@ -1,0 +1,55 @@
+﻿@model OnSale.Web.Models.EditUserViewModel
+
+<div class="form-group">
+    <label asp-for="Document" class="control-label"></label>
+    <input asp-for="Document" class="form-control" />
+    <span asp-validation-for="Document" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="FirstName" class="control-label"></label>
+    <input asp-for="FirstName" class="form-control" />
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="LastName" class="control-label"></label>
+    <input asp-for="LastName" class="form-control" />
+    <span asp-validation-for="LastName" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Address" class="control-label"></label>
+    <input asp-for="Address" class="form-control" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="PhoneNumber" class="control-label"></label>
+    <input asp-for="PhoneNumber" class="form-control" />
+    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="ImageFile" class="control-label"></label>
+    <input asp-for="ImageFile" class="form-control" type="file" />
+    <span asp-validation-for="ImageFile" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="CountryId" class="control-label"></label>
+    <select asp-for="CountryId" asp-items="Model.Countries" class="form-control"></select>
+    <span asp-validation-for="CountryId" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="DepartmentId" class="control-label"></label>
+    <select asp-for="DepartmentId" asp-items="Model.Departments" class="form-control"></select>
+    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="CityId" class="control-label"></label>
+    <select asp-for="CityId" asp-items="Model.Cities" class="form-control"></select>
+    <span asp-validation-for="CityId" class="text-danger"></span>
+</div>
