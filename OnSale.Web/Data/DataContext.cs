@@ -23,7 +23,7 @@ namespace OnSale.Web.Data
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Products> Products { get; set; }
 
         public DbSet<ProductImage> ProductImages { get; set; }
 
@@ -53,7 +53,7 @@ namespace OnSale.Web.Data
                 cit.HasOne(c => c.Department).WithMany(d => d.Cities).OnDelete(DeleteBehavior.Cascade);
             });
 
-            modelBuilder.Entity<Product>()
+            modelBuilder.Entity<Products>()
                 .HasIndex(t => t.Name)
                 .IsUnique();
         }

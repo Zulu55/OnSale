@@ -39,9 +39,9 @@ namespace OnSale.Web.Helpers
             };
         }
 
-        public async Task<Product> ToProductAsync(ProductViewModel model, bool isNew)
+        public async Task<Products> ToProductAsync(ProductViewModel model, bool isNew)
         {
-            return new Product
+            return new Products
             {
                 Category = await _context.Categories.FindAsync(model.CategoryId),
                 Description = model.Description,
@@ -69,7 +69,7 @@ namespace OnSale.Web.Helpers
             return decimal.Parse(priceString);
         }
 
-        public ProductViewModel ToProductViewModel(Product product)
+        public ProductViewModel ToProductViewModel(Products product)
         {
             return new ProductViewModel
             {

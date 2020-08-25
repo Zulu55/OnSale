@@ -54,7 +54,7 @@ namespace OnSale.Web.Controllers
             {
                 try
                 {
-                    Product product = await _converterHelper.ToProductAsync(model, true);
+                    Products product = await _converterHelper.ToProductAsync(model, true);
 
                     if (model.ImageFile != null)
                     {
@@ -97,7 +97,7 @@ namespace OnSale.Web.Controllers
                 return NotFound();
             }
 
-            Product product = await _context.Products
+            Products product = await _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(p => p.Id == id);
@@ -118,7 +118,7 @@ namespace OnSale.Web.Controllers
             {
                 try
                 {
-                    Product product = await _converterHelper.ToProductAsync(model, false);
+                    Products product = await _converterHelper.ToProductAsync(model, false);
 
                     if (model.ImageFile != null)
                     {
@@ -163,7 +163,7 @@ namespace OnSale.Web.Controllers
                 return NotFound();
             }
 
-            Product product = await _context.Products
+            Products product = await _context.Products
                 .Include(p => p.ProductImages)
                 .FirstOrDefaultAsync(p => p.Id == id);
             if (product == null)
@@ -191,7 +191,7 @@ namespace OnSale.Web.Controllers
                 return NotFound();
             }
 
-            Product product = await _context.Products
+            Products product = await _context.Products
                 .Include(c => c.Category)
                 .Include(c => c.ProductImages)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -210,7 +210,7 @@ namespace OnSale.Web.Controllers
                 return NotFound();
             }
 
-            Product product = await _context.Products.FindAsync(id);
+            Products product = await _context.Products.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
@@ -226,7 +226,7 @@ namespace OnSale.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                Product product = await _context.Products
+                Products product = await _context.Products
                     .Include(p => p.ProductImages)
                     .FirstOrDefaultAsync(p => p.Id == model.ProductId);
                 if (product == null)
@@ -271,7 +271,7 @@ namespace OnSale.Web.Controllers
                 return NotFound();
             }
 
-            Product product = await _context.Products.FirstOrDefaultAsync(p => p.ProductImages.FirstOrDefault(pi => pi.Id == productImage.Id) != null);
+            Products product = await _context.Products.FirstOrDefaultAsync(p => p.ProductImages.FirstOrDefault(pi => pi.Id == productImage.Id) != null);
             _context.ProductImages.Remove(productImage);
             await _context.SaveChangesAsync();
             return RedirectToAction($"{nameof(Details)}/{product.Id}");

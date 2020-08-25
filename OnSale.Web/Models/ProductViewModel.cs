@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OnSale.Web.Models
 {
-    public class ProductViewModel : Product
+    public class ProductViewModel : Products
     {
         [Display(Name = "Category")]
         [Range(1, int.MaxValue, ErrorMessage = "You must select a category.")]
