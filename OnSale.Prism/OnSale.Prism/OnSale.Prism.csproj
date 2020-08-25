@@ -22,4 +22,7 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ItemViewModels\" />
+  </ItemGroup>
 </Project>
