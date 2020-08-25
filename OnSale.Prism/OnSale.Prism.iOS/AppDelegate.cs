@@ -2,6 +2,7 @@
 using Prism;
 using Prism.Ioc;
 using Syncfusion.SfBusyIndicator.XForms.iOS;
+using Syncfusion.SfRotator.XForms.iOS;
 using UIKit;
 
 namespace OnSale.Prism.iOS
@@ -15,6 +16,7 @@ namespace OnSale.Prism.iOS
             LoadApplication(new App(new iOSInitializer()));
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             new SfBusyIndicatorRenderer();
+            new SfRotatorRenderer();
             return base.FinishedLaunching(app, options);
         }
     }
