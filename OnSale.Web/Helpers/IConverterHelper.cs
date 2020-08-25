@@ -11,8 +11,8 @@ namespace OnSale.Web.Helpers
 
         CategoryViewModel ToCategoryViewModel(Category category);
 
-        Task<Products> ToProductAsync(ProductViewModel model, bool isNew);
+        Task<Product> ToProductAsync(ProductViewModel model, bool isNew);
 
-        ProductViewModel ToProductViewModel(Products product);
+        ProductViewModel ToProductViewModel(Product product);
     }
 }

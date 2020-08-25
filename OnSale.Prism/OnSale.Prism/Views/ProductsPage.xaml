@@ -4,42 +4,62 @@
              xmlns:prism="http://prismlibrary.com"
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              x:Class="OnSale.Prism.Views.ProductsPage"
              Title="{Binding Title}">
 
-    <StackLayout Padding="5">
-        <CollectionView ItemsSource="{Binding Products}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <ffimageloading:CachedImage Grid.Column="0"
-                                                    Aspect="AspectFill"
-                                                    Source="{Binding ImageFullPath}" 
-                                                    CacheDuration= "50"
-                                                    Margin="5"
-                                                    RetryCount= "3"
-                                                    RetryDelay= "600"
-                                                    WidthRequest="100"/>
-                        <StackLayout Grid.Column="1">
-                            <Label Text="{Binding Name}" 
-                                   FontAttributes="Bold"
-                                   FontSize="Medium"
-                                   LineBreakMode="TailTruncation" />
-                            <Label Text="{Binding Price, StringFormat='{0:C2}'}"
-                                   LineBreakMode="TailTruncation"
-                                   FontAttributes="Italic" 
-                                   VerticalOptions="End" />
-                        </StackLayout>
-                        <Image Grid.Column="2" 
-                               Source="ic_more_vert"/>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Padding="5">
+            <SearchBar Placeholder="Search a product..."
+                       SearchCommand="{Binding SearchCommand}"
+                       Text="{Binding Search}"/>
+            <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <ffimageloading:CachedImage Grid.Column="0"
+                                                        Aspect="AspectFill"
+                                                        Source="{Binding ImageFullPath}" 
+                                                        CacheDuration= "50"
+                                                        Margin="5"
+                                                        RetryCount= "3"
+                                                        RetryDelay= "600"
+                                                        WidthRequest="100"/>
+                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                <Label Text="{Binding Name}" 
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"
+                                       LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding Price, StringFormat='{0:C2}'}"
+                                       LineBreakMode="TailTruncation"
+                                       FontAttributes="Italic" />
+                            </StackLayout>
+                            <Image Grid.Column="2" 
+                                   Source="ic_more_vert"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator AnimationType="Gear" 
+                                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                	                   AbsoluteLayout.LayoutFlags="All"
+                	                   BackgroundColor="Silver"
+                	                   HorizontalOptions="Center"
+                	                   TextColor="White"
+                	                   IsBusy="{Binding IsRunning}"
+                	                   Title="Loading..."
+                	                   VerticalOptions="Center"
+                	                   ViewBoxWidth="80"
+                	                   ViewBoxHeight="80" />
+    </AbsoluteLayout>
 </ContentPage>
