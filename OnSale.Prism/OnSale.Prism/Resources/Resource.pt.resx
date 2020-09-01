@@ -126,4 +126,31 @@
   <data name="Error" xml:space="preserve">
     <value>Erro</value>
   </data>
+  <data name="SearchProduct" xml:space="preserve">
+    <value>Pesquisar Produto...</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preço</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="IsStarred" xml:space="preserve">
+    <value>É Estrelado</value>
+  </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Adicionar ao carrinho</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Produtos</value>
+  </data>
 </root>
