@@ -124,5 +124,29 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("Products", resourceCulture);
             }
         }
+        
+        public static string Login {
+            get {
+                return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        public static string ModifyUser {
+            get {
+                return ResourceManager.GetString("ModifyUser", resourceCulture);
+            }
+        }
+        
+        public static string ShowPurchaseHistory {
+            get {
+                return ResourceManager.GetString("ShowPurchaseHistory", resourceCulture);
+            }
+        }
+        
+        public static string ShowShoppingCar {
+            get {
+                return ResourceManager.GetString("ShowShoppingCar", resourceCulture);
+            }
+        }
     }
 }

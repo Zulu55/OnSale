@@ -153,4 +153,16 @@
   <data name="Products" xml:space="preserve">
     <value>Produtos</value>
   </data>
+  <data name="Login" xml:space="preserve">
+    <value>Conecte-se</value>
+  </data>
+  <data name="ModifyUser" xml:space="preserve">
+    <value>Modificar usuário</value>
+  </data>
+  <data name="ShowPurchaseHistory" xml:space="preserve">
+    <value>Mostrar histórico de compras</value>
+  </data>
+  <data name="ShowShoppingCar" xml:space="preserve">
+    <value>Mostrar carro de compras</value>
+  </data>
 </root>
