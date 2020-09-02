@@ -168,4 +168,34 @@
   <data name="ShowShoppingCar" xml:space="preserve">
     <value>Show shopping car</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailPlaceHolder" xml:space="preserve">
+    <value>Enter your email...</value>
+  </data>
+  <data name="EmailError" xml:space="preserve">
+    <value>You must enter a valid email.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordPlaceHolder" xml:space="preserve">
+    <value>Enter your password...</value>
+  </data>
+  <data name="PasswordError" xml:space="preserve">
+    <value>You must enter your password.</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot your password?</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register New User</value>
+  </data>
+  <data name="LoginError" xml:space="preserve">
+    <value>Email or password wrong</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
 </root>

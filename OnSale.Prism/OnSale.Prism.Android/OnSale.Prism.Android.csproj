@@ -73,6 +73,12 @@
     <PackageReference Include="Syncfusion.Xamarin.SfRotator">
       <Version>18.2.0.56</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.2.0.56</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainApplication.cs" />

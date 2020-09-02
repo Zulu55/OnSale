@@ -184,10 +184,17 @@
     <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person.png" />
     <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-1.png" />
     <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-2.png" />
-    <ImageAsset Include="Assets.xcassets\Image.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Image.imageset\ic_shopping_cart.png" />
-    <ImageAsset Include="Assets.xcassets\Image.imageset\ic_shopping_cart-1.png" />
-    <ImageAsset Include="Assets.xcassets\Image.imageset\ic_shopping_cart-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart.png" />
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-2.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />
@@ -217,6 +224,12 @@
     <PackageReference Include="Syncfusion.Xamarin.SfRotator">
       <Version>18.2.0.56</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Core">
+      <Version>18.2.0.56</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnSale.Prism\OnSale.Prism.csproj">
@@ -240,6 +253,8 @@
     <Folder Include="Assets.xcassets\ic_history.imageset\" />
     <Folder Include="Assets.xcassets\ic_more_vert.imageset\" />
     <Folder Include="Assets.xcassets\ ic_person.imageset\" />
+    <Folder Include="Assets.xcassets\ic_shopping_cart.imageset\" />
+    <Folder Include="Assets.xcassets\ic_person.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

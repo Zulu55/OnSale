@@ -5,8 +5,73 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
+         	 xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+           	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="OnSale.Prism.Views.LoginPage"
              BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
   
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Padding="5">
+            <ScrollView>
+                <StackLayout>
+                    <Image HeightRequest="150"
+                           Margin="20"
+                           Source="onsale"/>
+
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <inputLayout:SfTextInputLayout Hint="{i18n:Translate Email}" 
+                                                       ContainerType="Outlined">
+                            <Entry Placeholder="{i18n:Translate EmailPlaceHolder}"
+                                   Keyboard="Email"
+                                   Text="{Binding Email}" />
+                        </inputLayout:SfTextInputLayout>
+                    
+                        <inputLayout:SfTextInputLayout Hint="{i18n:Translate Password}" 
+                                                       EnablePasswordVisibilityToggle="true"
+                                                       ContainerType="Outlined">
+                            <Entry Placeholder="{i18n:Translate PasswordPlaceHolder}" 
+                                   IsPassword="True"
+                                   Text="{Binding Password}" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+
+                    <Label FontAttributes="Bold"
+                           HorizontalOptions="Center" 
+                           Text="{i18n:Translate ForgotPassword}"
+                           TextColor="{StaticResource ColorAccent}"
+                           VerticalOptions="CenterAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ForgotPasswordCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+            </ScrollView>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button Command="{Binding LoginCommand}" 
+                        IsEnabled="{Binding IsEnabled}"
+                        Text="{i18n:Translate Login}"/>
+                <Button Command="{Binding RegisterCommand}" 
+                        IsEnabled="{Binding IsEnabled}"
+                        Text="{i18n:Translate Register}"
+                        Style="{StaticResource DangerButton}"/>
+            </StackLayout>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator AnimationType="Gear" 
+                                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                	                   AbsoluteLayout.LayoutFlags="All"
+                	                   BackgroundColor="{StaticResource ColorAccent}"
+                	                   HorizontalOptions="Center"
+                	                   TextColor="{StaticResource ColorFontInverse}"
+                	                   IsBusy="{Binding IsRunning}"
+                	                   Title="{i18n:Translate Loading}"
+                	                   VerticalOptions="Center"
+                	                   ViewBoxWidth="80"
+                	                   ViewBoxHeight="80" />
+    </AbsoluteLayout>
+
 </ContentPage>
