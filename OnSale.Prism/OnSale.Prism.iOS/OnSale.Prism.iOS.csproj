@@ -138,63 +138,177 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-Small-50x50@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\onsale.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale.png" />
-    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale-1.png" />
-    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale-2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x-1.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png" />
-    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard.png" />
-    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app.png" />
-    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_history.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history.png" />
-    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert.png" />
-    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert-2.png" />
-    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person.png" />
-    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-1.png" />
-    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart.png" />
-    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-2.png" />
+    <ImageAsset Include="Assets.xcassets\onsale.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\onsale.imageset\onsale-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%403x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-60x60%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-20x20%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-29x29%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-40x40%402x-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%401x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-76x76%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_card_giftcard.imageset\ic_card_giftcard-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_menu.imageset\ic_action_menu-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_exit_to_app.imageset\ic_exit_to_app-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_history.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_history.imageset\ic_history-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_more_vert.imageset\ic_more_vert-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ ic_person.imageset\ic_person-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_shopping_cart.imageset\ic_shopping_cart-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_shopping_cart-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />
