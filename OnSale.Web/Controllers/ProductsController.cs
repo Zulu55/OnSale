@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnSale.Common.Entities;
 using OnSale.Web.Data;
+using OnSale.Web.Data.Entities;
 using OnSale.Web.Helpers;
 using OnSale.Web.Models;
 using System;
@@ -33,6 +34,7 @@ namespace OnSale.Web.Controllers
             return View(await _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.ProductImages)
+                .Include(p => p.Qualifications)
                 .ToListAsync());
         }
         public IActionResult Create()
@@ -194,6 +196,8 @@ namespace OnSale.Web.Controllers
             Product product = await _context.Products
                 .Include(c => c.Category)
                 .Include(c => c.ProductImages)
+                .Include(p => p.Qualifications)
+                .ThenInclude(q => q.User)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {

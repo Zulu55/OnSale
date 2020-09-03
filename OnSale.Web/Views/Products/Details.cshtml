@@ -1,4 +1,4 @@
-﻿@model OnSale.Common.Entities.Product
+﻿@model OnSale.Web.Data.Entities.Product
 
 @{
     ViewData["Title"] = "Details";
@@ -48,10 +48,22 @@
             @Html.DisplayFor(model => model.IsStarred)
         </dd>
         <dt>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qualification)
+        </dd>
+        <dt>
             @Html.DisplayNameFor(model => model.ProductImagesNumber)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.ProductImagesNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductQualifications)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductQualifications)
         </dd>
     </dl>
 </div>
@@ -63,13 +75,13 @@
 <br />
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-5">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Product Images</h3>
             </div>
             <div class="panel-body">
-                <table class="table table-hover table-responsive table-striped" id="MyTable">
+                <table class="table table-hover table-responsive table-striped" id="MyTableImages">
                     <thead>
                         <tr>
                             <th>
@@ -95,6 +107,52 @@
             </div>
         </div>
     </div>
+    <div class="col-md-7">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Qualifications</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-responsive table-striped" id="MyTableQualifications">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Qualifications.FirstOrDefault().DateLocal)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Qualifications.FirstOrDefault().User.Email)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Qualifications.FirstOrDefault().Score)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Qualifications.FirstOrDefault().Remarks)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Qualifications)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DateLocal)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.User.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Score)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Remarks)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 <partial name="_DeleteDialog" />
@@ -106,7 +164,8 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#MyTable').DataTable();
+            $('#MyTableImages').DataTable();
+            $('#MyTableQualifications').DataTable();
 
             // Delete item
             sc_deleteDialog.openModal('deleteItem', true, 'btnYesDelete', '/Products/DeleteImage/', false);

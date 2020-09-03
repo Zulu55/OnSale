@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OnSale.Common.Entities.Product>
+﻿@model IEnumerable<OnSale.Web.Data.Entities.Product>
 
 @{
     ViewData["Title"] = "Index";
@@ -37,45 +37,57 @@
                                 @Html.DisplayNameFor(model => model.IsStarred)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.Qualification)
+                            </th>
+                            <th>
                                 Category
                             </th>
                             <th>
                                 @Html.DisplayNameFor(model => model.ProductImagesNumber)
                             </th>
-                            <th></th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ProductQualifications)
+                            </th>
+                            <th width="120px"></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Name)
-                                </td>
-                                <td>
-                                    <img src="@item.ImageFullPath" style="width:100px;height:100px;max-width: 100%; height: auto;" />
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Price)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.IsActive)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.IsStarred)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Category.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.ProductImagesNumber)
-                                </td>
-                                <td>
-                                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></a>
-                                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="glyphicon glyphicon-align-justify"></i></a>
-                                    <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog"><i class="glyphicon glyphicon-trash"></i></button>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                <img src="@item.ImageFullPath" style="width:100px;height:100px;max-width: 100%; height: auto;" />
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActive)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsStarred)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Qualification)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductImagesNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductQualifications)
+                            </td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning"><i class="glyphicon glyphicon-pencil"></i></a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"><i class="glyphicon glyphicon-align-justify"></i></a>
+                                <button data-id="@item.Id" class="btn btn-danger deleteItem" data-toggle="modal" data-target="#deleteDialog"><i class="glyphicon glyphicon-trash"></i></button>
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>
