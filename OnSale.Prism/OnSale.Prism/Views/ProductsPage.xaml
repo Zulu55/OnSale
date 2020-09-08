@@ -6,8 +6,9 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
-             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+         	 xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
            	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="OnSale.Prism.Views.ProductsPage"
              BackgroundColor="{StaticResource ColorBackground}"
              Title="{Binding Title}">
@@ -20,16 +21,19 @@
                        SearchCommand="{Binding SearchCommand}"
                        Text="{Binding Search}"/>
             <CollectionView ItemsSource="{Binding Products}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding SelectProductCommand}"/>
-                            </Grid.GestureRecognizers>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
+                            <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectProductCommand}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <ffimageloading:CachedImage Grid.Column="0"
                                                         Aspect="AspectFill"
@@ -39,14 +43,20 @@
                                                         RetryCount= "3"
                                                         RetryDelay= "600"
                                                         WidthRequest="100"/>
-                            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                            <StackLayout Grid.Column="1"
+                                         VerticalOptions="Center">
                                 <Label Text="{Binding Name}" 
                                        FontAttributes="Bold"
                                        FontSize="Medium"
                                        LineBreakMode="TailTruncation" />
                                 <Label Text="{Binding Price, StringFormat='{0:C2}'}"
                                        LineBreakMode="TailTruncation"
-                                       FontAttributes="Italic" />
+                                       FontAttributes="Italic" 
+                                       VerticalOptions="End" />
+                                <rating:SfRating ItemSize="20"
+                                                 IsEnabled="False"
+                                                 Precision="Exact"
+                                                 Value="{Binding Qualification}"/>
                             </StackLayout>
                             <Image Grid.Column="2" 
                                    Source="ic_more_vert"/>
@@ -67,4 +77,5 @@
                 	                   ViewBoxWidth="80"
                 	                   ViewBoxHeight="80" />
     </AbsoluteLayout>
+
 </ContentPage>

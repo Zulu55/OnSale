@@ -198,4 +198,22 @@
  <data name="LoginFirstMessage" xml:space="preserve">
     <value>Você deve estar logado para concluir esta ação. Você pode fazer o login ou registrar-se como um usuário abaixo.</value>
   </data>
+  <data name="Qualification" xml:space="preserve">
+    <value>Qualificação</value>
+  </data>
+  <data name="Qualifications" xml:space="preserve">
+    <value>Avaliações</value>
+  </data>
+  <data name="QualificationNumber" xml:space="preserve">
+    <value>Número de avaliações</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Encontro</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
 </root>

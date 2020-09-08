@@ -201,4 +201,22 @@
  <data name="LoginFirstMessage" xml:space="preserve">
     <value>You must be logged in to complete this action. You can login or register as a user below.</value>
   </data>
+  <data name="Qualification" xml:space="preserve">
+    <value>Qualification</value>
+  </data>
+  <data name="Qualifications" xml:space="preserve">
+    <value>Qualifications</value>
+  </data>
+  <data name="QualificationNumber" xml:space="preserve">
+    <value>Number of qualifications</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
 </root>

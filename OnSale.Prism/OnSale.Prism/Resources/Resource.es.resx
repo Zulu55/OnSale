@@ -201,4 +201,22 @@
  <data name="LoginFirstMessage" xml:space="preserve">
     <value>Para completar esta acción debe haber iniciado sesión. Puede iniciar sesión o registrarse como usuario a continuación.</value>
   </data>
+  <data name="Qualification" xml:space="preserve">
+    <value>Calificación</value>
+  </data>
+  <data name="Qualifications" xml:space="preserve">
+    <value>Calificaciones</value>
+  </data>
+  <data name="QualificationNumber" xml:space="preserve">
+    <value>Número de calificaciones</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
 </root>

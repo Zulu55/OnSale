@@ -214,5 +214,41 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("LoginFirstMessage", resourceCulture);
             }
         }
+        
+        public static string Qualification {
+            get {
+                return ResourceManager.GetString("Qualification", resourceCulture);
+            }
+        }
+        
+        public static string Qualifications {
+            get {
+                return ResourceManager.GetString("Qualifications", resourceCulture);
+            }
+        }
+        
+        public static string QualificationNumber {
+            get {
+                return ResourceManager.GetString("QualificationNumber", resourceCulture);
+            }
+        }
+        
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        public static string Remarks {
+            get {
+                return ResourceManager.GetString("Remarks", resourceCulture);
+            }
+        }
+        
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
+            }
+        }
     }
 }
