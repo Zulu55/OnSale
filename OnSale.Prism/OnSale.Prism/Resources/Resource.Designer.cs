@@ -208,5 +208,11 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("Logout", resourceCulture);
             }
         }
+        
+        public static string LoginFirstMessage {
+            get {
+                return ResourceManager.GetString("LoginFirstMessage", resourceCulture);
+            }
+        }
     }
 }

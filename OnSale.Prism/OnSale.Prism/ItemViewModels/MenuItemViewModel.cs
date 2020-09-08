@@ -1,5 +1,6 @@
 ﻿using OnSale.Common.Helpers;
 using OnSale.Common.Models;
+using OnSale.Prism.Helpers;
 using OnSale.Prism.Views;
 using Prism.Commands;
 using Prism.Navigation;
@@ -26,7 +27,20 @@ namespace OnSale.Prism.ItemViewModels
                 Settings.Token = null;
             }
 
-            await _navigationService.NavigateAsync($"/{nameof(OnSaleMasterDetailPage)}/NavigationPage/{PageName}");
+            if (IsLoginRequired && !Settings.IsLogin)
+            {
+                await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.LoginFirstMessage, Languages.Accept);
+                NavigationParameters parameters = new NavigationParameters
+                {
+                    { "pageReturn", PageName }
+                };
+
+                await _navigationService.NavigateAsync($"/{nameof(OnSaleMasterDetailPage)}/NavigationPage/{nameof(LoginPage)}", parameters);
+            }
+            else
+            {
+                await _navigationService.NavigateAsync($"/{nameof(OnSaleMasterDetailPage)}/NavigationPage/{PageName}");
+            }
         }
     }
 }

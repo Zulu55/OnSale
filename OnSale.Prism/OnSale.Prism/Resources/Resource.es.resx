@@ -198,4 +198,7 @@
   <data name="Logout" xml:space="preserve">
     <value>Cerrar sesión</value>
   </data>
+ <data name="LoginFirstMessage" xml:space="preserve">
+    <value>Para completar esta acción debe haber iniciado sesión. Puede iniciar sesión o registrarse como usuario a continuación.</value>
+  </data>
 </root>

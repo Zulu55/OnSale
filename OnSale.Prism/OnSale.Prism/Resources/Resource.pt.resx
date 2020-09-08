@@ -195,4 +195,7 @@
   <data name="Logout" xml:space="preserve">
     <value>Fazer logoff</value>
   </data>
+ <data name="LoginFirstMessage" xml:space="preserve">
+    <value>Você deve estar logado para concluir esta ação. Você pode fazer o login ou registrar-se como um usuário abaixo.</value>
+  </data>
 </root>
