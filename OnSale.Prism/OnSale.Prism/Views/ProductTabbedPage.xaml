@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+        	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="http://prismlibrary.com"
+        	xmlns:local="clr-namespace:OnSale.Prism.Views"
+        	prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="OnSale.Prism.Views.ProductTabbedPage"
+        	Title="{Binding Title}">
+
+    <TabbedPage.Children>
+        <local:ProductDetailPage />
+        <local:QualificationsPage />
+    </TabbedPage.Children>
+
+</TabbedPage>

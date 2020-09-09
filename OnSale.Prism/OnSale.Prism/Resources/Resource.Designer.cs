@@ -250,5 +250,29 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("Details", resourceCulture);
             }
         }
+        
+        public static string RemarksPlaceHolder {
+            get {
+                return ResourceManager.GetString("RemarksPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string QualificationError {
+            get {
+                return ResourceManager.GetString("QualificationError", resourceCulture);
+            }
+        }
+        
+        public static string NewQualification {
+            get {
+                return ResourceManager.GetString("NewQualification", resourceCulture);
+            }
+        }
+        
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
     }
 }

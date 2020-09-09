@@ -78,5 +78,13 @@ namespace OnSale.Prism.Helpers
         public static string QualificationNumber => Resource.QualificationNumber;
 
         public static string Details => Resource.Details;
+
+        public static string RemarksPlaceHolder => Resource.RemarksPlaceHolder;
+
+        public static string QualificationError => Resource.QualificationError;
+
+        public static string NewQualification => Resource.NewQualification;
+
+        public static string Save => Resource.Save;
     }
 }

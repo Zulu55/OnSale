@@ -216,4 +216,16 @@
   <data name="Details" xml:space="preserve">
     <value>Detalhes</value>
   </data>
+ <data name="RemarksPlaceHolder" xml:space="preserve">
+    <value>Insira seus comentários...</value>
+  </data>
+  <data name="QualificationError" xml:space="preserve">
+    <value>Você deve selecionar uma classificação.</value>
+  </data>
+  <data name="NewQualification" xml:space="preserve">
+    <value>Nova Classificação</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salve</value>
+  </data>
 </root>
