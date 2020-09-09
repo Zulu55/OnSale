@@ -132,9 +132,9 @@ namespace OnSale.Prism.ViewModels
             //TODO: Pending
         }
 
-        private void RegisterAsync()
+        private async void RegisterAsync()
         {
-            //TODO: Pending
+            await _navigationService.NavigateAsync(nameof(RegisterPage));
         }
     }
 }

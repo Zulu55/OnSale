@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"             x:Class="OnSale.Prism.Views.RegisterPage"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+           	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+
+       <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     Padding="5">
+            <ScrollView>
+                <StackLayout Spacing="0">
+                    <ffimageloading:CachedImage Aspect="AspectFit"
+                                                Source="{Binding Image}" 
+                                                CacheDuration= "50"
+                                                HeightRequest="150"
+                                                Margin="5"
+                                                RetryCount= "3"
+                                                RetryDelay= "600">
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation />
+                        </ffimageloading:CachedImage.Transformations>
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChangeImageCommand}"/>
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                    </ffimageloading:CachedImage>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Email}" 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate EmailPlaceHolder}"
+                               Keyboard="Email"
+                               Text="{Binding User.Email}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Document}" 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate DocumentPlaceHolder}" 
+                               Text="{Binding User.Document}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate FirstName}" 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate FirstNamePlaceHolder}" 
+                               Text="{Binding User.FirstName}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate LastName}" 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate LastName}" 
+                               Text="{Binding User.LastName}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Country}" 
+                                                   ContainerType="Outlined">
+                        <Picker ItemDisplayBinding="{Binding Name}"
+                                ItemsSource="{Binding Countries}"
+                                SelectedItem="{Binding Country}"
+                                Title="{i18n:Translate CountryPlaceHolder}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Department}" 
+                                                   ContainerType="Outlined">
+                        <Picker ItemDisplayBinding="{Binding Name}"
+                                ItemsSource="{Binding Departments}"
+                                SelectedItem="{Binding Department}"
+                                Title="{i18n:Translate DepartmentPlaceHolder}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate City}" 
+                                                   ContainerType="Outlined">
+                        <Picker ItemDisplayBinding="{Binding Name}"
+                                ItemsSource="{Binding Cities}"
+                                SelectedItem="{Binding City}"
+                                Title="{i18n:Translate CityPlaceHolder}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Address}" 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate AddressPlaceHolder}" 
+                               Text="{Binding User.Address}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Phone} " 
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate PhonePlaceHolder}" 
+                               Keyboard="Telephone"
+                               Text="{Binding User.Phone}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Password}" 
+                                                   EnablePasswordVisibilityToggle="true"
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate PasswordPlaceHolder}" 
+                               IsPassword="True"
+                               Text="{Binding User.Password}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate PasswordConfirm}" 
+                                                   EnablePasswordVisibilityToggle="true"
+                                                   ContainerType="Outlined">
+                        <Entry Placeholder="{i18n:Translate PasswordConfirmPlaceHolder}" 
+                               IsPassword="True"
+                               Text="{Binding User.PasswordConfirm}" />
+                    </inputLayout:SfTextInputLayout>
+
+                </StackLayout>
+            </ScrollView>   
+            <Button Command="{Binding RegisterCommand}"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="{i18n:Translate Register}"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator AnimationType="Gear" 
+                                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                	                   AbsoluteLayout.LayoutFlags="All"
+                	                   BackgroundColor="{StaticResource ColorAccent}"
+                	                   HorizontalOptions="Center"
+                	                   TextColor="{StaticResource ColorFontInverse}"
+                	                   IsBusy="{Binding IsRunning}"
+                	                   Title="{i18n:Translate Loading}"
+                	                   VerticalOptions="Center"
+                	                   ViewBoxWidth="80"
+                	                   ViewBoxHeight="80" />
+    </AbsoluteLayout>
+
+</ContentPage>

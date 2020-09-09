@@ -9,6 +9,7 @@
 
             <!-- Parameters -->
             <x:String x:Key="UrlAPI">https://onsalezulu.azurewebsites.net</x:String>
+            <x:String x:Key="UrlNoImage">https://onsalezulu.azurewebsites.net/images/noimage.png</x:String>
 
             <!-- Colors -->
             <Color x:Key="ColorBackground">#D9D9D9</Color>

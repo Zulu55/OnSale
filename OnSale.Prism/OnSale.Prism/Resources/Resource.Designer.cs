@@ -274,5 +274,209 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("Save", resourceCulture);
             }
         }
+        
+        public static string Document {
+            get {
+                return ResourceManager.GetString("Document", resourceCulture);
+            }
+        }
+        
+        public static string DocumentPlaceHolder {
+            get {
+                return ResourceManager.GetString("DocumentPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string DocumentError {
+            get {
+                return ResourceManager.GetString("DocumentError", resourceCulture);
+            }
+        }
+        
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        public static string FirstNamePlaceHolder {
+            get {
+                return ResourceManager.GetString("FirstNamePlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string FirstNameError {
+            get {
+                return ResourceManager.GetString("FirstNameError", resourceCulture);
+            }
+        }
+        
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        public static string LastNamePlaceHolder {
+            get {
+                return ResourceManager.GetString("LastNamePlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string LastNameError {
+            get {
+                return ResourceManager.GetString("LastNameError", resourceCulture);
+            }
+        }
+        
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        public static string AddressPlaceHolder {
+            get {
+                return ResourceManager.GetString("AddressPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string AddressError {
+            get {
+                return ResourceManager.GetString("AddressError", resourceCulture);
+            }
+        }
+        
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        public static string PhoneError {
+            get {
+                return ResourceManager.GetString("PhoneError", resourceCulture);
+            }
+        }
+        
+        public static string PhonePlaceHolder {
+            get {
+                return ResourceManager.GetString("PhonePlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string City {
+            get {
+                return ResourceManager.GetString("City", resourceCulture);
+            }
+        }
+        
+        public static string CityError {
+            get {
+                return ResourceManager.GetString("CityError", resourceCulture);
+            }
+        }
+        
+        public static string CityPlaceHolder {
+            get {
+                return ResourceManager.GetString("CityPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string Department {
+            get {
+                return ResourceManager.GetString("Department", resourceCulture);
+            }
+        }
+        
+        public static string DepartmentError {
+            get {
+                return ResourceManager.GetString("DepartmentError", resourceCulture);
+            }
+        }
+        
+        public static string DepartmentPlaceHolder {
+            get {
+                return ResourceManager.GetString("DepartmentPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
+            }
+        }
+        
+        public static string CountryError {
+            get {
+                return ResourceManager.GetString("CountryError", resourceCulture);
+            }
+        }
+        
+        public static string CountryPlaceHolder {
+            get {
+                return ResourceManager.GetString("CountryPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string PasswordConfirm {
+            get {
+                return ResourceManager.GetString("PasswordConfirm", resourceCulture);
+            }
+        }
+        
+        public static string PasswordConfirmError1 {
+            get {
+                return ResourceManager.GetString("PasswordConfirmError1", resourceCulture);
+            }
+        }
+        
+        public static string PasswordConfirmError2 {
+            get {
+                return ResourceManager.GetString("PasswordConfirmError2", resourceCulture);
+            }
+        }
+        
+        public static string PasswordConfirmPlaceHolder {
+            get {
+                return ResourceManager.GetString("PasswordConfirmPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string Error001 {
+            get {
+                return ResourceManager.GetString("Error001", resourceCulture);
+            }
+        }
+        
+        public static string Error002 {
+            get {
+                return ResourceManager.GetString("Error002", resourceCulture);
+            }
+        }
+        
+        public static string Error003 {
+            get {
+                return ResourceManager.GetString("Error003", resourceCulture);
+            }
+        }
+        
+        public static string Error004 {
+            get {
+                return ResourceManager.GetString("Error004", resourceCulture);
+            }
+        }
+        
+        public static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        public static string RegisterMessge {
+            get {
+                return ResourceManager.GetString("RegisterMessge", resourceCulture);
+            }
+        }
     }
 }
