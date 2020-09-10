@@ -478,5 +478,41 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("RegisterMessge", resourceCulture);
             }
         }
+        
+        public static string PictureSource {
+            get {
+                return ResourceManager.GetString("PictureSource", resourceCulture);
+            }
+        }
+        
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        public static string FromCamera {
+            get {
+                return ResourceManager.GetString("FromCamera", resourceCulture);
+            }
+        }
+        
+        public static string FromGallery {
+            get {
+                return ResourceManager.GetString("FromGallery", resourceCulture);
+            }
+        }
+        
+        public static string NoCameraSupported {
+            get {
+                return ResourceManager.GetString("NoCameraSupported", resourceCulture);
+            }
+        }
+        
+        public static string NoGallerySupported {
+            get {
+                return ResourceManager.GetString("NoGallerySupported", resourceCulture);
+            }
+        }
     }
 }

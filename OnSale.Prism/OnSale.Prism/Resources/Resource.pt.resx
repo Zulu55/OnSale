@@ -330,4 +330,25 @@
   <data name="RegisterMessge" xml:space="preserve">
     <value>Seu usuário foi cadastrado ok, um email foi enviado para confirmar a conta do usuário.</value>
   </data>
+  <data name="RegisterMessge" xml:space="preserve">
+    <value>Seu usuário foi cadastrado ok, um email foi enviado para confirmar a conta do usuário.</value>
+  </data>
+  <data name="PictureSource" xml:space="preserve">
+    <value>De onde você quer tirar a imagem?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="FromCamera" xml:space="preserve">
+    <value>Da camera</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>Da galeria</value>
+  </data>
+  <data name="NoCameraSupported" xml:space="preserve">
+    <value>O dispositivo não suporta acesso à câmera.</value>
+  </data>
+  <data name="NoGallerySupported" xml:space="preserve">
+    <value>O dispositivo não suporta acesso à galeria.</value>
+  </data>
 </root>

@@ -1,12 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using OnSale.Common.Entities;
+using OnSale.Common.Helpers;
 using OnSale.Common.Requests;
 using OnSale.Common.Responses;
 using OnSale.Common.Services;
 using OnSale.Prism.Helpers;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
 using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Essentials;
@@ -19,6 +23,7 @@ namespace OnSale.Prism.ViewModels
         private readonly INavigationService _navigationService;
         private readonly IRegexHelper _regexHelper;
         private readonly IApiService _apiService;
+        private readonly IFilesHelper _filesHelper;
         private ImageSource _image;
         private UserRequest _user;
         private City _city;
@@ -29,17 +34,21 @@ namespace OnSale.Prism.ViewModels
         private ObservableCollection<Country> _countries;
         private bool _isRunning;
         private bool _isEnabled;
+        private MediaFile _file;
+        private DelegateCommand _changeImageCommand;
         private DelegateCommand _registerCommand;
 
         public RegisterPageViewModel(
             INavigationService navigationService,
             IRegexHelper regexHelper,
-            IApiService apiService)
+            IApiService apiService,
+            IFilesHelper filesHelper)
             : base(navigationService)
         {
             _navigationService = navigationService;
             _regexHelper = regexHelper;
             _apiService = apiService;
+            _filesHelper = filesHelper;
             Title = Languages.Register;
             Image = App.Current.Resources["UrlNoImage"].ToString();
             IsEnabled = true;
@@ -47,7 +56,11 @@ namespace OnSale.Prism.ViewModels
             LoadCountriesAsync();
         }
 
-        public DelegateCommand RegisterCommand => _registerCommand ?? (_registerCommand = new DelegateCommand(RegisterAsync));
+        public DelegateCommand ChangeImageCommand => _changeImageCommand ??
+            (_changeImageCommand = new DelegateCommand(ChangeImageAsync));
+
+        public DelegateCommand RegisterCommand => _registerCommand ??
+            (_registerCommand = new DelegateCommand(RegisterAsync));
 
         public ImageSource Image
         {
@@ -167,7 +180,14 @@ namespace OnSale.Prism.ViewModels
                 return;
             }
 
+            byte[] imageArray = null;
+            if (_file != null)
+            {
+                imageArray = _filesHelper.ReadFully(_file.GetStream());
+            }
+
             string url = App.Current.Resources["UrlAPI"].ToString();
+            User.ImageArray = imageArray;
             User.CityId = City.Id;
 
             Response response = await _apiService.RegisterUserAsync(url, "/api", "/Account/Register", User);
@@ -271,6 +291,61 @@ namespace OnSale.Prism.ViewModels
             }
 
             return true;
+        }
+
+        private async void ChangeImageAsync()
+        {
+            await CrossMedia.Current.Initialize();
+
+            string source = await Application.Current.MainPage.DisplayActionSheet(
+                Languages.PictureSource,
+                Languages.Cancel,
+                null,
+                Languages.FromGallery,
+                Languages.FromCamera);
+
+            if (source == Languages.Cancel)
+            {
+                _file = null;
+                return;
+            }
+
+            if (source == Languages.FromCamera)
+            {
+                if (!CrossMedia.Current.IsCameraAvailable)
+                {
+                    await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.NoCameraSupported, Languages.Accept);
+                    return;
+                }
+
+                _file = await CrossMedia.Current.TakePhotoAsync(
+                    new StoreCameraMediaOptions
+                    {
+                        Directory = "Sample",
+                        Name = "test.jpg",
+                        PhotoSize = PhotoSize.Small,
+                    }
+                );
+            }
+            else
+            {
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    await App.Current.MainPage.DisplayAlert(Languages.Error, Languages.NoGallerySupported, Languages.Accept);
+                    return;
+                }
+
+                _file = await CrossMedia.Current.PickPhotoAsync();
+            }
+
+            if (_file != null)
+            {
+                Image = ImageSource.FromStream(() =>
+                {
+                    System.IO.Stream stream = _file.GetStream();
+                    return stream;
+                });
+            }
         }
     }
 }

@@ -333,4 +333,22 @@
   <data name="RegisterMessge" xml:space="preserve">
     <value>Your user has been registered ok, an email was sent to confirm the user account.</value>
   </data>
+  <data name="PictureSource" xml:space="preserve">
+    <value>Where do you want to take the picture?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="FromCamera" xml:space="preserve">
+    <value>From Camera</value>
+  </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>From Gallery</value>
+  </data>
+  <data name="NoCameraSupported" xml:space="preserve">
+    <value>The device does not support access to the camera.</value>
+  </data>
+  <data name="NoGallerySupported" xml:space="preserve">
+    <value>The device does not support access to the gallery.</value>
+  </data>
 </root>

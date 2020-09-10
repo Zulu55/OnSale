@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using OnSale.Common.Services;
 using Syncfusion.Licensing;
 using OnSale.Prism.Helpers;
+using OnSale.Common.Helpers;
 
 namespace OnSale.Prism
 {
@@ -31,6 +32,7 @@ namespace OnSale.Prism
 
             containerRegistry.Register<IApiService, ApiService>();
             containerRegistry.Register<IRegexHelper, RegexHelper>();
+            containerRegistry.Register<IFilesHelper, FilesHelper>();
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<ProductsPage, ProductsPageViewModel>();
