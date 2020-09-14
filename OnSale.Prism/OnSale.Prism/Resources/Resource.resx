@@ -447,4 +447,52 @@
     <data name="ModifyOrder" xml:space="preserve">
     <value>Modify Order</value>
   </data>
+    <data name="FinishOrderMessage" xml:space="preserve">
+    <value>Your order was completed successfully.</value>
+  </data>
+    <data name="PaymentMethod" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+    <data name="PaymentMethodError" xml:space="preserve">
+    <value>You must select a payment method.</value>
+  </data>
+    <data name="PaymentMethodPlaceHolder" xml:space="preserve">
+    <value>Select your payment method...</value>
+  </data>
+    <data name="Cash" xml:space="preserve">
+    <value>Cash (on delivery)</value>
+  </data>
+    <data name="CreditCard" xml:space="preserve">
+    <value>Credit Card</value>
+  </data>
+    <data name="DeliveryAddress" xml:space="preserve">
+    <value>Delivery Address</value>
+  </data>
+    <data name="DeliveryAddressError" xml:space="preserve">
+    <value>You must enter the delivery Address.</value>
+  </data>
+    <data name="DeliveryAddressPlaceHolder" xml:space="preserve">
+    <value>Enter the delivery Address...</value>
+  </data>
+    <data name="Expiry" xml:space="preserve">
+    <value>Expiry date format yy/mm</value>
+  </data>
+    <data name="ExpiryError" xml:space="preserve">
+    <value>You must enter the expiry date for your card.</value>
+  </data>
+    <data name="CreditCardError" xml:space="preserve">
+    <value>You must enter your credit card number.</value>
+  </data>
+    <data name="CVV" xml:space="preserve">
+    <value>CVV</value>
+  </data>
+    <data name="CVVError" xml:space="preserve">
+    <value>You must enter the CVV for your card.</value>
+  </data>
+    <data name="CreditCardNoValid" xml:space="preserve">
+    <value>Credit card not valid.</value>
+  </data>
+    <data name="PayNoOk" xml:space="preserve">
+    <value>The payment process was not successful.</value>
+  </data>
 </root>

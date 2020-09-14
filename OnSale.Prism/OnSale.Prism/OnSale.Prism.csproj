@@ -16,6 +16,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="18.2.0.57" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="18.2.0.57" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="18.2.0.57" />
   </ItemGroup>
 
   <ItemGroup>

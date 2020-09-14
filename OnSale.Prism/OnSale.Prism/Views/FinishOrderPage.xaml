@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+         	 xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+           	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:maskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             x:Class="OnSale.Prism.Views.FinishOrderPage"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+  
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Padding="5">
+            <ScrollView>
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{i18n:Translate Total}" 
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               FontSize="Medium"
+                               HorizontalTextAlignment="End"
+                               Text="{Binding TotalValue, StringFormat='{0:C2}'}" />
+
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{i18n:Translate Items}" 
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Grid.Row="1"
+                               FontSize="Medium"
+                               HorizontalTextAlignment="End"
+                               Text="{Binding TotalItems, StringFormat='{0:N2}'}" />
+
+                        <Label Grid.Column="0"
+                               Grid.Row="2"
+                               Text="{i18n:Translate Quantity}" 
+                               FontAttributes="Bold" 
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Grid.Row="2"
+                               FontSize="Medium"
+                               HorizontalTextAlignment="End"
+                               Text="{Binding TotalQuantity, StringFormat='{0:N2}'}" />
+                    </Grid>
+
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate PaymentMethod}" 
+                                                   ContainerType="Outlined">
+                        <Picker ItemDisplayBinding="{Binding Name}"
+                                ItemsSource="{Binding PaymentMethods}"
+                                SelectedItem="{Binding PaymentMethod}"
+                                Title="{i18n:Translate PaymentMethodPlaceHolder}"/>
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate CreditCard}" 
+                                                   ContainerType="Outlined"
+                                                   IsVisible="{Binding IsCreditCard}">
+                            <maskededit:SfMaskedEdit Value="{Binding CreditCard}"
+                                                     Keyboard="Numeric"
+                                                     Mask="0000 0000 0000 0000" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <inputLayout:SfTextInputLayout Hint="{i18n:Translate Expiry}" 
+                                                        ContainerType="Outlined"
+                                                        IsVisible="{Binding IsCreditCard}">
+                                <maskededit:SfMaskedEdit Value="{Binding Expiry}"
+                                                         Keyboard="Numeric"
+                                                         Mask="00/00" />
+                        </inputLayout:SfTextInputLayout>
+
+                        <inputLayout:SfTextInputLayout Hint="{i18n:Translate CVV}" 
+                                                       ContainerType="Outlined"
+                                                       HorizontalOptions="FillAndExpand"
+                                                       IsVisible="{Binding IsCreditCard}">
+                                <maskededit:SfMaskedEdit Value="{Binding CVV}"
+                                                         Keyboard="Numeric"
+                                                         Mask="000" />
+                        </inputLayout:SfTextInputLayout>
+                    </StackLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate DeliveryAddress}" 
+                                                   ContainerType="Outlined">
+                        <Editor Placeholder="{i18n:Translate DeliveryAddressPlaceHolder}"
+                                HeightRequest="100"
+                                Text="{Binding DeliveryAddress}" />
+                    </inputLayout:SfTextInputLayout>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Remarks}" 
+                                                   ContainerType="Outlined">
+                        <Editor Placeholder="{i18n:Translate RemarksPlaceHolder}"
+                                HeightRequest="100"
+                                Text="{Binding Remarks}" />
+                    </inputLayout:SfTextInputLayout>
+
+                </StackLayout>
+            </ScrollView>
+            <Button Command="{Binding FinishOrderCommand}"
+                    IsEnabled="{Binding IsEnabled}"
+                    Text="{i18n:Translate FinishOrder}"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator AnimationType="Gear" 
+                                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                	                   AbsoluteLayout.LayoutFlags="All"
+                	                   BackgroundColor="{StaticResource ColorAccent}"
+                	                   HorizontalOptions="Center"
+                	                   TextColor="{StaticResource ColorFontInverse}"
+                	                   IsBusy="{Binding IsRunning}"
+                	                   Title="{i18n:Translate Loading}"
+                	                   VerticalOptions="Center"
+                	                   ViewBoxWidth="80"
+                	                   ViewBoxHeight="80" />
+    </AbsoluteLayout>
+
+</ContentPage>

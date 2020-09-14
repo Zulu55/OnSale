@@ -700,5 +700,101 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("ModifyOrder", resourceCulture);
             }
         }
+        
+        public static string FinishOrderMessage {
+            get {
+                return ResourceManager.GetString("FinishOrderMessage", resourceCulture);
+            }
+        }
+        
+        public static string PaymentMethod {
+            get {
+                return ResourceManager.GetString("PaymentMethod", resourceCulture);
+            }
+        }
+        
+        public static string PaymentMethodError {
+            get {
+                return ResourceManager.GetString("PaymentMethodError", resourceCulture);
+            }
+        }
+        
+        public static string PaymentMethodPlaceHolder {
+            get {
+                return ResourceManager.GetString("PaymentMethodPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string Cash {
+            get {
+                return ResourceManager.GetString("Cash", resourceCulture);
+            }
+        }
+        
+        public static string CreditCard {
+            get {
+                return ResourceManager.GetString("CreditCard", resourceCulture);
+            }
+        }
+        
+        public static string DeliveryAddress {
+            get {
+                return ResourceManager.GetString("DeliveryAddress", resourceCulture);
+            }
+        }
+        
+        public static string DeliveryAddressError {
+            get {
+                return ResourceManager.GetString("DeliveryAddressError", resourceCulture);
+            }
+        }
+        
+        public static string DeliveryAddressPlaceHolder {
+            get {
+                return ResourceManager.GetString("DeliveryAddressPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string Expiry {
+            get {
+                return ResourceManager.GetString("Expiry", resourceCulture);
+            }
+        }
+        
+        public static string ExpiryError {
+            get {
+                return ResourceManager.GetString("ExpiryError", resourceCulture);
+            }
+        }
+        
+        public static string CreditCardError {
+            get {
+                return ResourceManager.GetString("CreditCardError", resourceCulture);
+            }
+        }
+        
+        public static string CVV {
+            get {
+                return ResourceManager.GetString("CVV", resourceCulture);
+            }
+        }
+        
+        public static string CVVError {
+            get {
+                return ResourceManager.GetString("CVVError", resourceCulture);
+            }
+        }
+        
+        public static string CreditCardNoValid {
+            get {
+                return ResourceManager.GetString("CreditCardNoValid", resourceCulture);
+            }
+        }
+        
+        public static string PayNoOk {
+            get {
+                return ResourceManager.GetString("PayNoOk", resourceCulture);
+            }
+        }
     }
 }
