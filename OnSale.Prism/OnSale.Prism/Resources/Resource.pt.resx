@@ -357,4 +357,10 @@
   <data name="RecoverPasswordMessage" xml:space="preserve">
     <value>Um email foi enviado para alterar sua senha.</value>
   </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Mudar Senha</value>
+  </data>
+   <data name="ChangeUserMessage" xml:space="preserve">
+    <value>Usuário atualizado.</value>
+  </data>
 </root>

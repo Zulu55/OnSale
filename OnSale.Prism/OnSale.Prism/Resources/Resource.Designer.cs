@@ -526,5 +526,17 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("RecoverPasswordMessage", resourceCulture);
             }
         }
+        
+        public static string ChangePassword {
+            get {
+                return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        public static string ChangeUserMessage {
+            get {
+                return ResourceManager.GetString("ChangeUserMessage", resourceCulture);
+            }
+        }
     }
 }
