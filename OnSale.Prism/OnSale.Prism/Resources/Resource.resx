@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
+    <!-- 
     Microsoft ResX Schema 
     
     Version 2.0
@@ -59,347 +59,392 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
-    <xsd:element name="root" msdata:IsDataSet="true">
-      <xsd:complexType>
-        <xsd:choice maxOccurs="unbounded">
-          <xsd:element name="metadata">
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
             <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
-              </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
             </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="assembly">
-            <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="data">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
-            </xsd:complexType>
-          </xsd:element>
-          <xsd:element name="resheader">
-            <xsd:complexType>
-              <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-              </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
-            </xsd:complexType>
-          </xsd:element>
-        </xsd:choice>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <resheader name="resmimetype">
-    <value>text/microsoft-resx</value>
-  </resheader>
-  <resheader name="version">
-    <value>2.0</value>
-  </resheader>
-  <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </resheader>
-  <data name="Accept" xml:space="preserve">
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Accept" xml:space="preserve">
     <value>Accept</value>
   </data>
-  <data name="ConnectionError" xml:space="preserve">
+    <data name="ConnectionError" xml:space="preserve">
     <value>Check the internet connection.</value>
   </data>
-  <data name="Error" xml:space="preserve">
+    <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
-  <data name="Loading" xml:space="preserve">
+    <data name="Loading" xml:space="preserve">
     <value>Loading...</value>
   </data>
-  <data name="SearchProduct" xml:space="preserve">
+    <data name="SearchProduct" xml:space="preserve">
     <value>Search a product...</value>
   </data>
-  <data name="Name" xml:space="preserve">
+    <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="Description" xml:space="preserve">
+    <data name="Description" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="Price" xml:space="preserve">
+    <data name="Price" xml:space="preserve">
     <value>Price</value>
   </data>
-  <data name="Category" xml:space="preserve">
+    <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
-  <data name="IsStarred" xml:space="preserve">
+    <data name="IsStarred" xml:space="preserve">
     <value>Is Starred</value>
   </data>
-  <data name="AddToCart" xml:space="preserve">
+    <data name="AddToCart" xml:space="preserve">
     <value>Add to cart</value>
   </data>
-  <data name="Product" xml:space="preserve">
+    <data name="Product" xml:space="preserve">
     <value>Product</value>
   </data>
-  <data name="Products" xml:space="preserve">
+    <data name="Products" xml:space="preserve">
     <value>Products</value>
   </data>
-  <data name="Login" xml:space="preserve">
+    <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
-  <data name="ModifyUser" xml:space="preserve">
+    <data name="ModifyUser" xml:space="preserve">
     <value>Modify user</value>
   </data>
-  <data name="ShowPurchaseHistory" xml:space="preserve">
+    <data name="ShowPurchaseHistory" xml:space="preserve">
     <value>Show purchase history</value>
   </data>
-  <data name="ShowShoppingCar" xml:space="preserve">
+    <data name="ShowShoppingCar" xml:space="preserve">
     <value>Show shopping car</value>
   </data>
-  <data name="Email" xml:space="preserve">
+    <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
-  <data name="EmailPlaceHolder" xml:space="preserve">
+    <data name="EmailPlaceHolder" xml:space="preserve">
     <value>Enter your email...</value>
   </data>
-  <data name="EmailError" xml:space="preserve">
+    <data name="EmailError" xml:space="preserve">
     <value>You must enter a valid email.</value>
   </data>
-  <data name="Password" xml:space="preserve">
+    <data name="Password" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="PasswordPlaceHolder" xml:space="preserve">
+    <data name="PasswordPlaceHolder" xml:space="preserve">
     <value>Enter your password...</value>
   </data>
-  <data name="PasswordError" xml:space="preserve">
+    <data name="PasswordError" xml:space="preserve">
     <value>You must enter your password.</value>
   </data>
-  <data name="ForgotPassword" xml:space="preserve">
+    <data name="ForgotPassword" xml:space="preserve">
     <value>Forgot your password?</value>
   </data>
-  <data name="Register" xml:space="preserve">
+    <data name="Register" xml:space="preserve">
     <value>Register New User</value>
   </data>
-  <data name="LoginError" xml:space="preserve">
+    <data name="LoginError" xml:space="preserve">
     <value>Email or password wrong</value>
   </data>
-  <data name="Logout" xml:space="preserve">
+    <data name="Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
- <data name="LoginFirstMessage" xml:space="preserve">
+    <data name="LoginFirstMessage" xml:space="preserve">
     <value>You must be logged in to complete this action. You can login or register as a user below.</value>
   </data>
-  <data name="Qualification" xml:space="preserve">
+    <data name="Qualification" xml:space="preserve">
     <value>Qualification</value>
   </data>
-  <data name="Qualifications" xml:space="preserve">
+    <data name="Qualifications" xml:space="preserve">
     <value>Qualifications</value>
   </data>
-  <data name="QualificationNumber" xml:space="preserve">
+    <data name="QualificationNumber" xml:space="preserve">
     <value>Number of qualifications</value>
   </data>
-  <data name="Date" xml:space="preserve">
+    <data name="Date" xml:space="preserve">
     <value>Date</value>
   </data>
-  <data name="Remarks" xml:space="preserve">
+    <data name="Remarks" xml:space="preserve">
     <value>Remarks</value>
   </data>
-  <data name="Details" xml:space="preserve">
+    <data name="Details" xml:space="preserve">
     <value>Details</value>
   </data>
- <data name="RemarksPlaceHolder" xml:space="preserve">
+    <data name="RemarksPlaceHolder" xml:space="preserve">
     <value>Enter your remarks...</value>
   </data>
-  <data name="QualificationError" xml:space="preserve">
+    <data name="QualificationError" xml:space="preserve">
     <value>You must select a qualification.</value>
   </data>
-  <data name="NewQualification" xml:space="preserve">
+    <data name="NewQualification" xml:space="preserve">
     <value>New Qualification</value>
   </data>
-  <data name="Save" xml:space="preserve">
+    <data name="Save" xml:space="preserve">
     <value>Save</value>
   </data>
-  <data name="Document" xml:space="preserve">
+    <data name="Document" xml:space="preserve">
     <value>Document</value>
   </data>
-  <data name="DocumentPlaceHolder" xml:space="preserve">
+    <data name="DocumentPlaceHolder" xml:space="preserve">
     <value>Enter your document number...</value>
   </data>
-  <data name="DocumentError" xml:space="preserve">
+    <data name="DocumentError" xml:space="preserve">
     <value>You must enter a document.</value>
   </data>
-  <data name="FirstName" xml:space="preserve">
+    <data name="FirstName" xml:space="preserve">
     <value>First name</value>
   </data>
-  <data name="FirstNamePlaceHolder" xml:space="preserve">
+    <data name="FirstNamePlaceHolder" xml:space="preserve">
     <value>Enter your first name...</value>
   </data>
-  <data name="FirstNameError" xml:space="preserve">
+    <data name="FirstNameError" xml:space="preserve">
     <value>You must enter a first name.</value>
   </data>
-  <data name="LastName" xml:space="preserve">
+    <data name="LastName" xml:space="preserve">
     <value>Last name</value>
   </data>
-  <data name="LastNamePlaceHolder" xml:space="preserve">
+    <data name="LastNamePlaceHolder" xml:space="preserve">
     <value>Enter your last name...</value>
   </data>
-  <data name="LastNameError" xml:space="preserve">
+    <data name="LastNameError" xml:space="preserve">
     <value>You must enter a last name.</value>
   </data>
-  <data name="Address" xml:space="preserve">
+    <data name="Address" xml:space="preserve">
     <value>Address</value>
   </data>
-  <data name="AddressPlaceHolder" xml:space="preserve">
+    <data name="AddressPlaceHolder" xml:space="preserve">
     <value>Enter your address...</value>
   </data>
-  <data name="AddressError" xml:space="preserve">
+    <data name="AddressError" xml:space="preserve">
     <value>You must enter an address.</value>
   </data>
-  <data name="Phone" xml:space="preserve">
+    <data name="Phone" xml:space="preserve">
     <value>Phone</value>
   </data>
-  <data name="PhoneError" xml:space="preserve">
+    <data name="PhoneError" xml:space="preserve">
     <value>Enter your phone...</value>
   </data>
-  <data name="PhonePlaceHolder" xml:space="preserve">
+    <data name="PhonePlaceHolder" xml:space="preserve">
     <value>You must enter a phone.</value>
   </data>
-  <data name="City" xml:space="preserve">
+    <data name="City" xml:space="preserve">
     <value>City</value>
   </data>
-  <data name="CityError" xml:space="preserve">
+    <data name="CityError" xml:space="preserve">
     <value>You must select a city.</value>
   </data>
-  <data name="CityPlaceHolder" xml:space="preserve">
+    <data name="CityPlaceHolder" xml:space="preserve">
     <value>Select your city...</value>
   </data>
-  <data name="Department" xml:space="preserve">
+    <data name="Department" xml:space="preserve">
     <value>Department</value>
   </data>
-  <data name="DepartmentError" xml:space="preserve">
+    <data name="DepartmentError" xml:space="preserve">
     <value>You must select a department.</value>
   </data>
-  <data name="DepartmentPlaceHolder" xml:space="preserve">
+    <data name="DepartmentPlaceHolder" xml:space="preserve">
     <value>Select your department...</value>
   </data>
-  <data name="Country" xml:space="preserve">
+    <data name="Country" xml:space="preserve">
     <value>Country</value>
   </data>
-  <data name="CountryError" xml:space="preserve">
+    <data name="CountryError" xml:space="preserve">
     <value>You must select a country.</value>
   </data>
-  <data name="CountryPlaceHolder" xml:space="preserve">
+    <data name="CountryPlaceHolder" xml:space="preserve">
     <value>Select your country...</value>
   </data>
-  <data name="PasswordConfirm" xml:space="preserve">
+    <data name="PasswordConfirm" xml:space="preserve">
     <value>Password confirm</value>
   </data>
-  <data name="PasswordConfirmError1" xml:space="preserve">
+    <data name="PasswordConfirmError1" xml:space="preserve">
     <value>You must enter a password confirm.</value>
   </data>
-  <data name="PasswordConfirmError2" xml:space="preserve">
+    <data name="PasswordConfirmError2" xml:space="preserve">
     <value>The password and confirm does not match.</value>
   </data>
-  <data name="PasswordConfirmPlaceHolder" xml:space="preserve">
+    <data name="PasswordConfirmPlaceHolder" xml:space="preserve">
     <value>Enter the password confirm...</value>
   </data>
-  <data name="Error001" xml:space="preserve">
+    <data name="Error001" xml:space="preserve">
     <value>User no found.</value>
   </data>
-  <data name="Error002" xml:space="preserve">
+    <data name="Error002" xml:space="preserve">
     <value>Product no found.</value>
   </data>
-  <data name="Error003" xml:space="preserve">
+    <data name="Error003" xml:space="preserve">
     <value>A user with that email is already registered.</value>
   </data>
-  <data name="Error004" xml:space="preserve">
+    <data name="Error004" xml:space="preserve">
     <value>City no found.</value>
   </data>
-  <data name="Ok" xml:space="preserve">
+    <data name="Ok" xml:space="preserve">
     <value>Ok</value>
   </data>
-  <data name="RegisterMessge" xml:space="preserve">
+    <data name="RegisterMessge" xml:space="preserve">
     <value>Your user has been registered ok, an email was sent to confirm the user account.</value>
   </data>
-  <data name="PictureSource" xml:space="preserve">
+    <data name="PictureSource" xml:space="preserve">
     <value>Where do you want to take the picture?</value>
   </data>
-  <data name="Cancel" xml:space="preserve">
+    <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="FromCamera" xml:space="preserve">
+    <data name="FromCamera" xml:space="preserve">
     <value>From Camera</value>
   </data>
-  <data name="FromGallery" xml:space="preserve">
+    <data name="FromGallery" xml:space="preserve">
     <value>From Gallery</value>
   </data>
-  <data name="NoCameraSupported" xml:space="preserve">
+    <data name="NoCameraSupported" xml:space="preserve">
     <value>The device does not support access to the camera.</value>
   </data>
-  <data name="NoGallerySupported" xml:space="preserve">
+    <data name="NoGallerySupported" xml:space="preserve">
     <value>The device does not support access to the gallery.</value>
   </data>
-  <data name="RecoverPassword" xml:space="preserve">
+    <data name="RecoverPassword" xml:space="preserve">
     <value>Recover Password</value>
   </data>
-  <data name="RecoverPasswordMessage" xml:space="preserve">
+    <data name="RecoverPasswordMessage" xml:space="preserve">
     <value>An email was sent to change your password.</value>
   </data>
-  <data name="ChangePassword" xml:space="preserve">
+    <data name="ChangePassword" xml:space="preserve">
     <value>Change Password</value>
   </data>
-  <data name="ChangeUserMessage" xml:space="preserve">
+    <data name="ChangeUserMessage" xml:space="preserve">
     <value>User updated.</value>
   </data>
-  <data name="ConfirmNewPassword" xml:space="preserve">
+    <data name="ConfirmNewPassword" xml:space="preserve">
     <value>Confirm New Password</value>
   </data>
-  <data name="ConfirmNewPasswordError1" xml:space="preserve">
+    <data name="ConfirmNewPasswordError1" xml:space="preserve">
     <value>You must enter a confirmation for the new password.</value>
   </data>
-  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <data name="ConfirmNewPasswordError2" xml:space="preserve">
     <value>The password and the confirmation doesn't match.</value>
   </data>
-  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <data name="ConfirmNewPasswordError2" xml:space="preserve">
     <value>User updated.</value>
   </data>
-  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
     <value>Enter the confirmation for the new password...</value>
   </data>
-  <data name="CurrentPassword" xml:space="preserve">
+    <data name="CurrentPassword" xml:space="preserve">
     <value>Current password</value>
   </data>
-  <data name="CurrentPasswordError" xml:space="preserve">
+    <data name="CurrentPasswordError" xml:space="preserve">
     <value>You must enter your new password.</value>
   </data>
-  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
     <value>Enter your current password....</value>
   </data>
-  <data name="NewPassword" xml:space="preserve">
+    <data name="NewPassword" xml:space="preserve">
     <value>New password</value>
   </data>
-  <data name="NewPasswordError" xml:space="preserve">
+    <data name="NewPasswordError" xml:space="preserve">
     <value>You must enter the new password.</value>
   </data>
-  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <data name="NewPasswordPlaceHolder" xml:space="preserve">
     <value>Enter the new password...</value>
   </data>
- <data name="Error005" xml:space="preserve">
+    <data name="Error005" xml:space="preserve">
     <value>The current password is incorrect.</value>
   </data>
-  <data name="ChangePassworrdMessage" xml:space="preserve">
+    <data name="ChangePassworrdMessage" xml:space="preserve">
     <value>The password was changed successfully.</value>
+  </data>
+    <data name="Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+    <data name="QuantityError" xml:space="preserve">
+    <value>You must enter a quantity.</value>
+  </data>
+    <data name="QuantityPlaceHolder" xml:space="preserve">
+    <value>Enter the product quantity...</value>
+  </data>
+    <data name="AddToCartMessage" xml:space="preserve">
+    <value>The product was added to cart successfully.</value>
+  </data>
+    <data name="ProductExistInOrder" xml:space="preserve">
+    <value>The product already exists on the order. You can modify the order in 'View shopping cart'.</value>
+  </data>
+    <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+    <data name="FinishOrder" xml:space="preserve">
+    <value>FinishOrder</value>
+  </data>
+    <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+    <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+    <data name="ClearAllConfirm" xml:space="preserve">
+    <value>Are you sure to clean all the products in the order?</value>
+  </data>
+    <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+    <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+    <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+    <data name="DeleteProductInOrderConfirm" xml:space="preserve">
+    <value>Are you sure to delete the product in the order?</value>
+  </data>
+    <data name="ModifyOrder" xml:space="preserve">
+    <value>Modify Order</value>
   </data>
 </root>

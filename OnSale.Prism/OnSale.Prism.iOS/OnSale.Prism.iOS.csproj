@@ -321,6 +321,10 @@
     <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle.png" />
     <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-1.png" />
     <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete.png" />
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-1.png" />
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-2.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />
@@ -362,6 +366,9 @@
     <PackageReference Include="Xam.Plugin.Media">
       <Version>5.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox">
+      <Version>18.2.0.57</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnSale.Prism\OnSale.Prism.csproj">
@@ -390,6 +397,7 @@
     <Folder Include="Assets.xcassets\ic_action_card_giftcard.imageset\" />
     <Folder Include="Assets.xcassets\ic_action_star_half.imageset\" />
     <Folder Include="Assets.xcassets\ic_action_add_circle.imageset\" />
+    <Folder Include="Assets.xcassets\ic_action_delete.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

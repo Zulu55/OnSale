@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+         	 xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+           	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:numericBox="clr-namespace:Syncfusion.SfNumericTextBox.XForms;assembly=Syncfusion.SfNumericTextBox.XForms"
+             x:Class="OnSale.Prism.Views.AddToCartPage"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+  
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All" 
+                     Padding="5">
+            <ScrollView>
+                <StackLayout>
+                    <syncfusion:SfRotator EnableAutoPlay="True"  
+                                          EnableLooping="True"
+                                          HeightRequest="300"
+                                          ItemsSource="{Binding Images}"
+                                          NavigationDelay="5000"
+                                          NavigationDirection="Horizontal"
+                                          NavigationStripMode="Dots"
+                                          NavigationStripPosition="Bottom">
+                        <syncfusion:SfRotator.ItemTemplate>
+                            <DataTemplate>
+                                <ffimageloading:CachedImage Aspect="AspectFit"
+                                                            CacheDuration= "50"
+                                                            DownsampleToViewSize = "true"
+                                                            ErrorPlaceholder= "ErrorImage"
+                                                            HeightRequest="300"
+                                                            LoadingPlaceholder= "LoaderImage"
+                                                            RetryCount= "3"
+                                                            RetryDelay= "600"
+                                                            Source="{Binding ImageFullPath}"/>
+                            </DataTemplate>
+                        </syncfusion:SfRotator.ItemTemplate>
+                    </syncfusion:SfRotator>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0"
+                               Grid.Row="0"
+                               Text="{i18n:Translate Name}"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Grid.Row="0"
+                               FontSize="Large"
+                               Text="{Binding Product.Name}"/>
+
+                        <Label Grid.Column="0"
+                               Grid.Row="1"
+                               Text="{i18n:Translate Price}"
+                               VerticalOptions="Center"/>
+                        <Label Grid.Column="1"
+                               Grid.Row="1"
+                               FontSize="Large"
+                               Text="{Binding Product.Price, StringFormat='{0:C2}'}"/>
+                    </Grid>
+
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Quantity}" 
+                                                   ContainerType="Outlined">
+                        <numericBox:SfNumericTextBox FormatString="n"
+                                                     Value="{Binding Quantity}"/>
+                    </inputLayout:SfTextInputLayout>
+                    
+                    <inputLayout:SfTextInputLayout Hint="{i18n:Translate Remarks}" 
+                                                   ContainerType="Outlined">
+                        <Editor Placeholder="{i18n:Translate RemarksPlaceHolder}"
+                                HeightRequest="100"
+                                Text="{Binding Remarks}" />
+                    </inputLayout:SfTextInputLayout>
+
+                </StackLayout>
+            </ScrollView>
+            <Button Command="{Binding AddToCartCommand}" 
+                    Text="{i18n:Translate AddToCart}"
+                    VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+        <busyindicator:SfBusyIndicator AnimationType="Gear" 
+                                       AbsoluteLayout.LayoutBounds=".5,.5,.5,.5"
+                	                   AbsoluteLayout.LayoutFlags="All"
+                	                   BackgroundColor="{StaticResource ColorAccent}"
+                	                   HorizontalOptions="Center"
+                	                   TextColor="{StaticResource ColorFontInverse}"
+                	                   IsBusy="{Binding IsRunning}"
+                	                   Title="{i18n:Translate Loading}"
+                	                   VerticalOptions="Center"
+                	                   ViewBoxWidth="80"
+                	                   ViewBoxHeight="80" />
+    </AbsoluteLayout>
+
+</ContentPage>

@@ -532,108 +532,172 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
             }
         }
-
-        public static string ChangeUserMessage
-        {
-            get
-            {
+        
+        public static string ChangeUserMessage {
+            get {
                 return ResourceManager.GetString("ChangeUserMessage", resourceCulture);
             }
         }
-
-        public static string ConfirmNewPassword
-        {
-            get
-            {
+        
+        public static string ConfirmNewPassword {
+            get {
                 return ResourceManager.GetString("ConfirmNewPassword", resourceCulture);
             }
         }
-
-        public static string ConfirmNewPasswordError1
-        {
-            get
-            {
+        
+        public static string ConfirmNewPasswordError1 {
+            get {
                 return ResourceManager.GetString("ConfirmNewPasswordError1", resourceCulture);
             }
         }
-
-        public static string ConfirmNewPasswordError2
-        {
-            get
-            {
+        
+        public static string ConfirmNewPasswordError2 {
+            get {
                 return ResourceManager.GetString("ConfirmNewPasswordError2", resourceCulture);
             }
         }
-
-        public static string ConfirmNewPasswordPlaceHolder
-        {
-            get
-            {
+        
+        public static string ConfirmNewPasswordPlaceHolder {
+            get {
                 return ResourceManager.GetString("ConfirmNewPasswordPlaceHolder", resourceCulture);
             }
         }
-
-        public static string CurrentPassword
-        {
-            get
-            {
+        
+        public static string CurrentPassword {
+            get {
                 return ResourceManager.GetString("CurrentPassword", resourceCulture);
             }
         }
-
-        public static string CurrentPasswordError
-        {
-            get
-            {
+        
+        public static string CurrentPasswordError {
+            get {
                 return ResourceManager.GetString("CurrentPasswordError", resourceCulture);
             }
         }
-
-        public static string CurrentPasswordPlaceHolder
-        {
-            get
-            {
+        
+        public static string CurrentPasswordPlaceHolder {
+            get {
                 return ResourceManager.GetString("CurrentPasswordPlaceHolder", resourceCulture);
             }
         }
-
-        public static string NewPassword
-        {
-            get
-            {
+        
+        public static string NewPassword {
+            get {
                 return ResourceManager.GetString("NewPassword", resourceCulture);
             }
         }
-
-        public static string NewPasswordError
-        {
-            get
-            {
+        
+        public static string NewPasswordError {
+            get {
                 return ResourceManager.GetString("NewPasswordError", resourceCulture);
             }
         }
-
-        public static string ChangePassworrdMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ChangePassworrdMessage", resourceCulture);
-            }
-        }
-
-        public static string NewPasswordPlaceHolder
-        {
-            get
-            {
+        
+        public static string NewPasswordPlaceHolder {
+            get {
                 return ResourceManager.GetString("NewPasswordPlaceHolder", resourceCulture);
             }
         }
-
-        public static string Error005
-        {
-            get
-            {
+        
+        public static string Error005 {
+            get {
                 return ResourceManager.GetString("Error005", resourceCulture);
+            }
+        }
+        
+        public static string ChangePassworrdMessage {
+            get {
+                return ResourceManager.GetString("ChangePassworrdMessage", resourceCulture);
+            }
+        }
+        
+        public static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        public static string QuantityError {
+            get {
+                return ResourceManager.GetString("QuantityError", resourceCulture);
+            }
+        }
+        
+        public static string QuantityPlaceHolder {
+            get {
+                return ResourceManager.GetString("QuantityPlaceHolder", resourceCulture);
+            }
+        }
+        
+        public static string AddToCartMessage {
+            get {
+                return ResourceManager.GetString("AddToCartMessage", resourceCulture);
+            }
+        }
+        
+        public static string ProductExistInOrder {
+            get {
+                return ResourceManager.GetString("ProductExistInOrder", resourceCulture);
+            }
+        }
+        
+        public static string Value {
+            get {
+                return ResourceManager.GetString("Value", resourceCulture);
+            }
+        }
+        
+        public static string FinishOrder {
+            get {
+                return ResourceManager.GetString("FinishOrder", resourceCulture);
+            }
+        }
+        
+        public static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        public static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        public static string ClearAllConfirm {
+            get {
+                return ResourceManager.GetString("ClearAllConfirm", resourceCulture);
+            }
+        }
+        
+        public static string Items {
+            get {
+                return ResourceManager.GetString("Items", resourceCulture);
+            }
+        }
+        
+        public static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        public static string DeleteProductInOrderConfirm {
+            get {
+                return ResourceManager.GetString("DeleteProductInOrderConfirm", resourceCulture);
+            }
+        }
+        
+        public static string ModifyOrder {
+            get {
+                return ResourceManager.GetString("ModifyOrder", resourceCulture);
             }
         }
     }
