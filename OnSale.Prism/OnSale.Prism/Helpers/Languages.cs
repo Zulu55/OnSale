@@ -176,5 +176,29 @@ namespace OnSale.Prism.Helpers
         public static string ChangePassword => Resource.ChangePassword;
 
         public static string ChangeUserMessage => Resource.ChangeUserMessage;
+
+        public static string ConfirmNewPassword => Resource.ConfirmNewPassword;
+
+        public static string ConfirmNewPasswordError1 => Resource.ConfirmNewPasswordError1;
+
+        public static string ConfirmNewPasswordError2 => Resource.ConfirmNewPasswordError2;
+
+        public static string ConfirmNewPasswordPlaceHolder => Resource.ConfirmNewPasswordPlaceHolder;
+
+        public static string CurrentPassword => Resource.CurrentPassword;
+
+        public static string CurrentPasswordError => Resource.CurrentPasswordError;
+
+        public static string CurrentPasswordPlaceHolder => Resource.CurrentPasswordPlaceHolder;
+
+        public static string NewPassword => Resource.NewPassword;
+
+        public static string NewPasswordError => Resource.NewPasswordError;
+
+        public static string NewPasswordPlaceHolder => Resource.NewPasswordPlaceHolder;
+
+        public static string Error005 => Resource.Error005;
+
+        public static string ChangePassworrdMessage => Resource.ChangePassworrdMessage;
     }
 }

@@ -363,4 +363,40 @@
    <data name="ChangeUserMessage" xml:space="preserve">
     <value>Usuário atualizado.</value>
   </data>
+ <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Nova confirmação de senha</value>
+  </data>
+  <data name="ConfirmNewPasswordError1" xml:space="preserve">
+    <value>Você deve inserir uma confirmação para a nova senha.</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>A nova senha e a confirmação não correspondem.</value>
+  </data>
+  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <value>Digite a confirmação para a nova senha ...</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Senha atual</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>Você deve inserir sua senha atual.</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Digite sua senha atual ...</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nova senha</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>Você deve inserir uma nova senha.</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Digite a nova senha ...</value>
+  </data>
+  <data name="Error005" xml:space="preserve">
+    <value>A senha atual está incorreta.</value>
+  </data>
+  <data name="ChangePassworrdMessage" xml:space="preserve">
+    <value>A senha foi alterada com sucesso.</value>
+  </data>
 </root>

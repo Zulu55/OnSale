@@ -532,10 +532,108 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("ChangePassword", resourceCulture);
             }
         }
-        
-        public static string ChangeUserMessage {
-            get {
+
+        public static string ChangeUserMessage
+        {
+            get
+            {
                 return ResourceManager.GetString("ChangeUserMessage", resourceCulture);
+            }
+        }
+
+        public static string ConfirmNewPassword
+        {
+            get
+            {
+                return ResourceManager.GetString("ConfirmNewPassword", resourceCulture);
+            }
+        }
+
+        public static string ConfirmNewPasswordError1
+        {
+            get
+            {
+                return ResourceManager.GetString("ConfirmNewPasswordError1", resourceCulture);
+            }
+        }
+
+        public static string ConfirmNewPasswordError2
+        {
+            get
+            {
+                return ResourceManager.GetString("ConfirmNewPasswordError2", resourceCulture);
+            }
+        }
+
+        public static string ConfirmNewPasswordPlaceHolder
+        {
+            get
+            {
+                return ResourceManager.GetString("ConfirmNewPasswordPlaceHolder", resourceCulture);
+            }
+        }
+
+        public static string CurrentPassword
+        {
+            get
+            {
+                return ResourceManager.GetString("CurrentPassword", resourceCulture);
+            }
+        }
+
+        public static string CurrentPasswordError
+        {
+            get
+            {
+                return ResourceManager.GetString("CurrentPasswordError", resourceCulture);
+            }
+        }
+
+        public static string CurrentPasswordPlaceHolder
+        {
+            get
+            {
+                return ResourceManager.GetString("CurrentPasswordPlaceHolder", resourceCulture);
+            }
+        }
+
+        public static string NewPassword
+        {
+            get
+            {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+
+        public static string NewPasswordError
+        {
+            get
+            {
+                return ResourceManager.GetString("NewPasswordError", resourceCulture);
+            }
+        }
+
+        public static string ChangePassworrdMessage
+        {
+            get
+            {
+                return ResourceManager.GetString("ChangePassworrdMessage", resourceCulture);
+            }
+        }
+
+        public static string NewPasswordPlaceHolder
+        {
+            get
+            {
+                return ResourceManager.GetString("NewPasswordPlaceHolder", resourceCulture);
+            }
+        }
+
+        public static string Error005
+        {
+            get
+            {
+                return ResourceManager.GetString("Error005", resourceCulture);
             }
         }
     }

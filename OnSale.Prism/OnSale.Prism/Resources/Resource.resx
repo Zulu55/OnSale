@@ -363,4 +363,43 @@
   <data name="ChangeUserMessage" xml:space="preserve">
     <value>User updated.</value>
   </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="ConfirmNewPasswordError1" xml:space="preserve">
+    <value>You must enter a confirmation for the new password.</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>The password and the confirmation doesn't match.</value>
+  </data>
+  <data name="ConfirmNewPasswordError2" xml:space="preserve">
+    <value>User updated.</value>
+  </data>
+  <data name="ConfirmNewPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter the confirmation for the new password...</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="CurrentPasswordError" xml:space="preserve">
+    <value>You must enter your new password.</value>
+  </data>
+  <data name="CurrentPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter your current password....</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="NewPasswordError" xml:space="preserve">
+    <value>You must enter the new password.</value>
+  </data>
+  <data name="NewPasswordPlaceHolder" xml:space="preserve">
+    <value>Enter the new password...</value>
+  </data>
+ <data name="Error005" xml:space="preserve">
+    <value>The current password is incorrect.</value>
+  </data>
+  <data name="ChangePassworrdMessage" xml:space="preserve">
+    <value>The password was changed successfully.</value>
+  </data>
 </root>
