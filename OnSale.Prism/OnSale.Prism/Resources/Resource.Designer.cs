@@ -514,5 +514,17 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("NoGallerySupported", resourceCulture);
             }
         }
+        
+        public static string RecoverPassword {
+            get {
+                return ResourceManager.GetString("RecoverPassword", resourceCulture);
+            }
+        }
+        
+        public static string RecoverPasswordMessage {
+            get {
+                return ResourceManager.GetString("RecoverPasswordMessage", resourceCulture);
+            }
+        }
     }
 }

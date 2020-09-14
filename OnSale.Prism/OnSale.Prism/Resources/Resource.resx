@@ -351,4 +351,10 @@
   <data name="NoGallerySupported" xml:space="preserve">
     <value>The device does not support access to the gallery.</value>
   </data>
+  <data name="RecoverPassword" xml:space="preserve">
+    <value>Recover Password</value>
+  </data>
+  <data name="RecoverPasswordMessage" xml:space="preserve">
+    <value>An email was sent to change your password.</value>
+  </data>
 </root>
