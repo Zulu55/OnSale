@@ -28,10 +28,30 @@ namespace OnSale.Web.Data.Entities
         [Display(Name = "Image")]
         public Guid ImageId { get; set; }
 
+        [Display(Name = "Login Type")]
+        public LoginType LoginType { get; set; }
+
+        public string ImageFacebook { get; set; }
+
         [Display(Name = "Image")]
-        public string ImageFullPath => ImageId == Guid.Empty
-            ? $"https://onsalezulu.azurewebsites.net/images/noimage.png"
-            : $"https://onsale.blob.core.windows.net/users/{ImageId}";
+        public string ImageFullPath
+        {
+            get
+            {
+                if (LoginType == LoginType.Facebook && string.IsNullOrEmpty(ImageFacebook) ||
+                    LoginType == LoginType.OnSale && ImageId == Guid.Empty)
+                {
+                    return $"https://onsaleprepweb.azurewebsites.net/images/noimage.png";
+                }
+
+                if (LoginType == LoginType.Facebook)
+                {
+                    return ImageFacebook;
+                }
+
+                return $"https://onsale.blob.core.windows.net/users/{ImageId}";
+            }
+        }
 
         [Display(Name = "User Type")]
         public UserType UserType { get; set; }

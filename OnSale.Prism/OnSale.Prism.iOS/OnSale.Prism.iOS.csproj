@@ -359,10 +359,18 @@
     <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-2.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb.png" />
-    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_fb.imageset\ic_fb-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />

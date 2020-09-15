@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using OnSale.Common.Enums;
+using OnSale.Common.Models;
 using OnSale.Web.Data.Entities;
 using OnSale.Web.Models;
 using System;
@@ -14,6 +15,8 @@ namespace OnSale.Web.Helpers
         Task<User> GetUserAsync(Guid userId);
 
         Task<IdentityResult> AddUserAsync(User user, string password);
+
+        Task<User> AddUserAsync(FacebookProfile model);
 
         Task CheckRoleAsync(string roleName);
 
