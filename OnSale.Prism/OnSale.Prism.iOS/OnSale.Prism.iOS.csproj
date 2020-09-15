@@ -309,22 +309,54 @@
     <ImageAsset Include="Assets.xcassets\ic_person.imageset\ic_person-2.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-2.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-1.png" />
-    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-2.png" />
+    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_card_giftcard.imageset\ic_action_card_giftcard-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_star_half.imageset\ic_action_star_half-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_add_circle.imageset\ic_action_add_circle-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\ic_action_delete.imageset\ic_action_delete-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h@2x.png" />
