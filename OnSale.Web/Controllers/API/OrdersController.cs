@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using OnSale.Common.Enums;
 using OnSale.Common.Responses;
 using OnSale.Web.Data;
@@ -73,6 +74,68 @@ namespace OnSale.Web.Controllers.API
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
             return Ok(order);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetOrders()
+        {
+            string email = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value;
+            User user = await _userHelper.GetUserAsync(email);
+            if (user == null)
+            {
+                return NotFound("Error001");
+            }
+
+            List<Order> orders = await _context.Orders
+                .Include(o => o.User)
+                .ThenInclude(u => u.City)
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .ThenInclude(od => od.Category)
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .ThenInclude(od => od.ProductImages)
+                .Where(o => o.User.Id == user.Id)
+                .OrderByDescending(o => o.Date)
+                .ToListAsync();
+            return Ok(orders);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutOrders([FromBody] Order order)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            string email = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value;
+            User user = await _userHelper.GetUserAsync(email);
+            if (user == null)
+            {
+                return NotFound("Error001");
+            }
+
+            Order currentOrder = await _context.Orders
+                .Include(o => o.User)
+                .ThenInclude(u => u.City)
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .ThenInclude(od => od.Category)
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .ThenInclude(od => od.ProductImages)
+                .FirstOrDefaultAsync(o => o.Id == order.Id && o.User.Id == user.Id);
+            if (currentOrder == null)
+            {
+                return NotFound();
+            }
+
+            currentOrder.OrderStatus = order.OrderStatus;
+            currentOrder.Remarks = order.Remarks;
+            _context.Orders.Update(currentOrder);
+            await _context.SaveChangesAsync();
+            return Ok(currentOrder);
         }
     }
 }

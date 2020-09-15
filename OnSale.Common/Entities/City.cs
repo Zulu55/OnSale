@@ -10,6 +10,7 @@ namespace OnSale.Common.Entities
 
         [MaxLength(50, ErrorMessage = "The filed {0} must contain less than {1} characteres.")]
         [Required]
+        [Display(Name = "City")]
         public string Name { get; set; }
 
         [JsonIgnore]
