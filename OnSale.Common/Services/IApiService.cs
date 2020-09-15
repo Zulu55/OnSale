@@ -1,4 +1,5 @@
-﻿using OnSale.Common.Requests;
+﻿using OnSale.Common.Models;
+using OnSale.Common.Requests;
 using OnSale.Common.Responses;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace OnSale.Common.Services
         Task<Response> GetListAsync<T>(string urlBase, string servicePrefix, string controller);
 
         Task<Response> GetTokenAsync(string urlBase, string servicePrefix, string controller, TokenRequest request);
+
+        Task<Response> GetTokenAsync(string urlBase, string servicePrefix, string controller, FacebookProfile request);
 
         Task<Response> PostQualificationAsync(string urlBase, string servicePrefix, string controller, QualificationRequest qualificationRequest, string token);
 

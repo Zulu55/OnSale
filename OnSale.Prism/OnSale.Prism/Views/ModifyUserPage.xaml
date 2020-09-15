@@ -43,13 +43,15 @@
 
                     <inputLayout:SfTextInputLayout Hint="{i18n:Translate FirstName}" 
                                                    ContainerType="Outlined">
-                        <Entry Placeholder="{i18n:Translate FirstNamePlaceHolder}" 
+                        <Entry Placeholder="{i18n:Translate FirstNamePlaceHolder}"
+                               IsEnabled="{Binding IsOnSaleUser}"
                                Text="{Binding User.FirstName}" />
                     </inputLayout:SfTextInputLayout>
 
                     <inputLayout:SfTextInputLayout Hint="{i18n:Translate LastName}" 
                                                    ContainerType="Outlined">
                         <Entry Placeholder="{i18n:Translate LastName}" 
+                               IsEnabled="{Binding IsOnSaleUser}"
                                Text="{Binding User.LastName}" />
                     </inputLayout:SfTextInputLayout>
 
