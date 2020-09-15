@@ -15,6 +15,7 @@ namespace OnSale.Web.Data.Entities
 
         public User User { get; set; }
 
+        [Display(Name = "Order Status")]
         public OrderStatus OrderStatus { get; set; }
 
         [Display(Name = "Date Sent")]
@@ -28,10 +29,13 @@ namespace OnSale.Web.Data.Entities
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:N0}")]
         public int Lines => OrderDetails == null ? 0 : OrderDetails.Count;
 
+        [DisplayFormat(DataFormatString = "{0:N2}")]
         public float Quantity => OrderDetails == null ? 0 : OrderDetails.Sum(od => od.Quantity);
 
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         public decimal Value => OrderDetails == null ? 0 : OrderDetails.Sum(od => od.Value);
     }
 }

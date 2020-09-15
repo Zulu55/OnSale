@@ -5,6 +5,7 @@
         Pending,
         Spreading,
         Sent,
-        Confirmed
+        Confirmed,
+        Cancelled
     }
 }
