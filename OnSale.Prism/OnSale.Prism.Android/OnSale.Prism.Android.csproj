@@ -100,6 +100,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit">
       <Version>18.2.0.57</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.FacebookClient">
+      <Version>2.2.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainApplication.cs" />
@@ -216,6 +219,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\ic_action_delete.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_fb.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

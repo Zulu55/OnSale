@@ -1,10 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using OnSale.Common.Helpers;
+using OnSale.Common.Models;
 using OnSale.Common.Requests;
 using OnSale.Common.Responses;
 using OnSale.Common.Services;
 using OnSale.Prism.Helpers;
 using OnSale.Prism.Views;
+using Plugin.FacebookClient;
 using Prism.Commands;
 using Prism.Navigation;
 using Xamarin.Essentials;
@@ -19,6 +24,8 @@ namespace OnSale.Prism.ViewModels
         private bool _isEnabled;
         private string _password;
         private string _pageReturn;
+        private readonly IFacebookClient _facebookService = CrossFacebookClient.Current;
+        private DelegateCommand _loginFacebookCommand;
         private DelegateCommand _loginCommand;
         private DelegateCommand _registerCommand;
         private DelegateCommand _forgotPasswordCommand;
@@ -30,6 +37,8 @@ namespace OnSale.Prism.ViewModels
             Title = Languages.Login;
             IsEnabled = true;
         }
+
+        public DelegateCommand LoginFacebookCommand => _loginFacebookCommand ?? (_loginFacebookCommand = new DelegateCommand(LoginFacebookAsync));
 
         public DelegateCommand LoginCommand => _loginCommand ?? (_loginCommand = new DelegateCommand(LoginAsync));
 
@@ -140,6 +149,49 @@ namespace OnSale.Prism.ViewModels
         private async void RegisterAsync()
         {
             await _navigationService.NavigateAsync(nameof(RegisterPage));
+        }
+
+        private async void LoginFacebookAsync()
+        {
+            try
+            {
+
+                if (_facebookService.IsLoggedIn)
+                {
+                    _facebookService.Logout();
+                }
+
+                async void userDataDelegate(object sender, FBEventArgs<string> e)
+                {
+                    switch (e.Status)
+                    {
+                        case FacebookActionStatus.Completed:
+                            FacebookProfile facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(e.Data));
+                            break;
+                        case FacebookActionStatus.Canceled:
+                            await App.Current.MainPage.DisplayAlert("Facebook Auth", "Canceled", "Ok");
+                            break;
+                        case FacebookActionStatus.Error:
+                            await App.Current.MainPage.DisplayAlert("Facebook Auth", "Error", "Ok");
+                            break;
+                        case FacebookActionStatus.Unauthorized:
+                            await App.Current.MainPage.DisplayAlert("Facebook Auth", "Unauthorized", "Ok");
+                            break;
+                    }
+
+                    _facebookService.OnUserData -= userDataDelegate;
+                }
+
+                _facebookService.OnUserData += userDataDelegate;
+
+                string[] fbRequestFields = { "email", "first_name", "picture", "gender", "last_name" };
+                string[] fbPermisions = { "email" };
+                await _facebookService.RequestUserDataAsync(fbRequestFields, fbPermisions);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
         }
     }
 }

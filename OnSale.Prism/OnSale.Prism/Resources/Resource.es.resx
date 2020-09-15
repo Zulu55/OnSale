@@ -525,4 +525,10 @@
     <data name="Question" xml:space="preserve">
     <value>Pregunta</value>
   </data>
+    <data name="LoginFacebook" xml:space="preserve">
+    <value>Ingresar con Facebook</value>
+  </data>
+    <data name="ChangeOnSocialNetwork" xml:space="preserve">
+    <value>Los usuarios registrados por redes sociales, deben cambiar la foto o contraseña en la red social.</value>
+  </data>
 </root>

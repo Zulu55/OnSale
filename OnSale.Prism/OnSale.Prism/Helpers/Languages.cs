@@ -284,5 +284,9 @@ namespace OnSale.Prism.Helpers
         public static string CancelOrdenConfirm => Resource.CancelOrdenConfirm;
 
         public static string Question => Resource.Question;
+
+        public static string LoginFacebook => Resource.LoginFacebook;
+
+        public static string ChangeOnSocialNetwork => Resource.ChangeOnSocialNetwork;
     }
 }
