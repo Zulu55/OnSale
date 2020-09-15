@@ -262,5 +262,27 @@ namespace OnSale.Prism.Helpers
         public static string CreditCardNoValid => Resource.CreditCardNoValid;
 
         public static string PayNoOk => Resource.PayNoOk;
+
+        public static string Order => Resource.Order;
+
+        public static string UpdateRemarks => Resource.UpdateRemarks;
+
+        public static string CancelOrder => Resource.CancelOrder;
+
+        public static string OrderStatus => Resource.OrderStatus;
+
+        public static string SearchOrder => Resource.SearchOrder;
+
+        public static string DateSent => Resource.DateSent;
+
+        public static string DateConfirmed => Resource.DateConfirmed;
+
+        public static string RemarksError => Resource.RemarksError;
+
+        public static string OrderUpdatedOk => Resource.OrderUpdatedOk;
+
+        public static string CancelOrdenConfirm => Resource.CancelOrdenConfirm;
+
+        public static string Question => Resource.Question;
     }
 }

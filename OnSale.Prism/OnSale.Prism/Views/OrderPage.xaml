@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+           	 xmlns:i18n="clr-namespace:OnSale.Prism.Helpers"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="OnSale.Prism.Views.OrderPage"
+             BackgroundColor="{StaticResource ColorBackground}"
+             Title="{Binding Title}">
+
+    <StackLayout Padding="5">
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0"
+                           Grid.Row="0"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate Date}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Text="{Binding Order.DateLocal, StringFormat='{0:yyyy/MM/hh tt}'}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="1"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate DateSent}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="0"
+                           Text="{Binding Order.DateSentLocal, StringFormat='{0:yyyy/MM/hh tt}'}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="2"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate DateConfirmed}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="2"
+                           Text="{Binding Order.DateConfirmedLocal, StringFormat='{0:yyyy/MM/hh tt}'}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="3"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate OrderStatus}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="3"
+                           Text="{Binding Order.OrderStatus}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="4"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate PaymentMethod}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="4"
+                           Text="{Binding Order.PaymentMethod}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="5"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate Items}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="5"
+                           HorizontalOptions="End"
+                           Text="{Binding Order.Lines, StringFormat='{0:N0}'}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="6"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate Quantity}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="6"
+                           HorizontalOptions="End"
+                           Text="{Binding Order.Quantity, StringFormat='{0:N2}'}"/>
+
+                    <Label Grid.Column="0"
+                           Grid.Row="7"
+                           FontAttributes="Bold"
+                           Text="{i18n:Translate Value}"/>
+                    <Label Grid.Column="1"
+                           Grid.Row="7"
+                           HorizontalOptions="End"
+                           Text="{Binding Order.Value, StringFormat='{0:C2}'}"/>
+                </Grid>
+
+                <inputLayout:SfTextInputLayout Hint="{i18n:Translate Remarks}" 
+                                                ContainerType="Outlined">
+                    <Editor Placeholder="{i18n:Translate RemarksPlaceHolder}"
+                            HeightRequest="100"
+                            Text="{Binding Order.Remarks}" />
+                </inputLayout:SfTextInputLayout>
+
+                <CollectionView ItemsSource="{Binding OrderDetails}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <ffimageloading:CachedImage Grid.Column="0"
+                                                            Aspect="AspectFill"
+                                                            Source="{Binding Product.ImageFullPath}" 
+                                                            CacheDuration= "50"
+                                                            Margin="5"
+                                                            RetryCount= "3"
+                                                            RetryDelay= "600"
+                                                            VerticalOptions="Center"
+                                                            WidthRequest="100"/>
+                                <StackLayout Grid.Column="1"
+                                             VerticalOptions="Center">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Column="0"
+                                               Grid.Row="0"
+                                               FontAttributes="Bold"
+                                               Text="{i18n:Translate Product}"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="0"
+                                               Text="{Binding Product.Name}" 
+                                               FontAttributes="Bold"
+                                               FontSize="Medium"
+                                               LineBreakMode="TailTruncation" />
+
+                                        <Label Grid.Column="0"
+                                               Grid.Row="1"
+                                               FontAttributes="Bold"
+                                               Text="{i18n:Translate Remarks}"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="1"
+                                               Text="{Binding Remarks}"
+                                               MaxLines="3"
+                                               LineBreakMode="TailTruncation"
+                                               VerticalOptions="End" />
+
+                                        <Label Grid.Column="0"
+                                               Grid.Row="2"
+                                               FontAttributes="Bold"
+                                               Text="{i18n:Translate Price}"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="2"
+                                               Text="{Binding Product.Price, StringFormat='{0:C2}'}"
+                                               LineBreakMode="TailTruncation"
+                                               VerticalOptions="End" />
+
+                                        <Label Grid.Column="0"
+                                               Grid.Row="3"
+                                               FontAttributes="Bold"
+                                               Text="{i18n:Translate Quantity}"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="3"
+                                               Text="{Binding Quantity, StringFormat='{0:N2}'}"
+                                               LineBreakMode="TailTruncation"
+                                               VerticalOptions="End" />
+
+                                        <Label Grid.Column="0"
+                                               Grid.Row="4"
+                                               FontAttributes="Bold"
+                                               Text="{i18n:Translate Value}"/>
+                                        <Label Grid.Column="1"
+                                               Grid.Row="4"
+                                               Text="{Binding Value, StringFormat='{0:C2}'}"
+                                               LineBreakMode="TailTruncation"
+                                               VerticalOptions="End" />
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal"
+                     VerticalOptions="EndAndExpand">
+            <Button Command="{Binding UpdateRemarksCommand}"
+                    Text="{i18n:Translate UpdateRemarks}"/>
+            <Button Command="{Binding CancelOrderCommand}"
+                    IsVisible="{Binding IsVisible}"
+                    Style="{StaticResource DangerButton}"
+                    Text="{i18n:Translate CancelOrder}"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

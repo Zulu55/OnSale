@@ -492,4 +492,37 @@
     <data name="PayNoOk" xml:space="preserve">
     <value>El proceso de pago no fue exitoso.</value>
   </data>
+    <data name="Order" xml:space="preserve">
+    <value>Pedido</value>
+  </data>
+    <data name="UpdateRemarks" xml:space="preserve">
+    <value>Actualizar Comentarios</value>
+  </data>
+    <data name="CancelOrder" xml:space="preserve">
+    <value>Cancelar Pedido</value>
+  </data>
+    <data name="OrderStatus" xml:space="preserve">
+    <value>Estado Ordén</value>
+  </data>
+    <data name="SearchOrder" xml:space="preserve">
+    <value>Ingrese el valor a buscar...</value>
+  </data>
+    <data name="DateSent" xml:space="preserve">
+    <value>Fecha envío</value>
+  </data>
+    <data name="DateConfirmed" xml:space="preserve">
+    <value>Fecha confirmación</value>
+  </data>
+    <data name="RemarksError" xml:space="preserve">
+    <value>Debes ingresar algún comentario.</value>
+  </data>
+    <data name="OrderUpdatedOk" xml:space="preserve">
+    <value>Pedido actualizado con éxito.</value>
+  </data>
+    <data name="CancelOrdenConfirm" xml:space="preserve">
+    <value>¿Estas seguro de cancelar el pedido?</value>
+  </data>
+    <data name="Question" xml:space="preserve">
+    <value>Pregunta</value>
+  </data>
 </root>

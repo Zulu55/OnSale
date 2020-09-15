@@ -796,5 +796,71 @@ namespace OnSale.Prism.Resources {
                 return ResourceManager.GetString("PayNoOk", resourceCulture);
             }
         }
+        
+        public static string Order {
+            get {
+                return ResourceManager.GetString("Order", resourceCulture);
+            }
+        }
+        
+        public static string UpdateRemarks {
+            get {
+                return ResourceManager.GetString("UpdateRemarks", resourceCulture);
+            }
+        }
+        
+        public static string CancelOrder {
+            get {
+                return ResourceManager.GetString("CancelOrder", resourceCulture);
+            }
+        }
+        
+        public static string OrderStatus {
+            get {
+                return ResourceManager.GetString("OrderStatus", resourceCulture);
+            }
+        }
+        
+        public static string SearchOrder {
+            get {
+                return ResourceManager.GetString("SearchOrder", resourceCulture);
+            }
+        }
+        
+        public static string DateSent {
+            get {
+                return ResourceManager.GetString("DateSent", resourceCulture);
+            }
+        }
+        
+        public static string DateConfirmed {
+            get {
+                return ResourceManager.GetString("DateConfirmed", resourceCulture);
+            }
+        }
+        
+        public static string RemarksError {
+            get {
+                return ResourceManager.GetString("RemarksError", resourceCulture);
+            }
+        }
+        
+        public static string OrderUpdatedOk {
+            get {
+                return ResourceManager.GetString("OrderUpdatedOk", resourceCulture);
+            }
+        }
+        
+        public static string CancelOrdenConfirm {
+            get {
+                return ResourceManager.GetString("CancelOrdenConfirm", resourceCulture);
+            }
+        }
+        
+        public static string Question {
+            get {
+                return ResourceManager.GetString("Question", resourceCulture);
+            }
+        }
     }
 }
