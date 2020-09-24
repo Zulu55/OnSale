@@ -191,7 +191,9 @@ namespace OnSale.Web.Controllers.API
                 UserName = request.Email,
                 ImageId = imageId,
                 UserType = UserType.User,
-                City = city
+                City = city,
+                Latitude = request.Latitude,
+                Logitude = request.Logitude
             };
 
             IdentityResult result = await _userHelper.AddUserAsync(user, request.Password);
@@ -286,9 +288,11 @@ namespace OnSale.Web.Controllers.API
             user.Address = request.Address;
             user.PhoneNumber = request.Phone;
             //TODO: Fix the document on the videos
-            user.Document = request.Phone;
+            user.Document = request.Document;
             user.City = city;
             user.ImageId = imageId;
+            user.Latitude = request.Latitude;
+            user.Logitude = request.Logitude;
 
             IdentityResult respose = await _userHelper.UpdateUserAsync(user);
             if (!respose.Succeeded)

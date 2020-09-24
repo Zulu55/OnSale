@@ -52,5 +52,9 @@ namespace OnSale.Common.Responses
         public string FullName => $"{FirstName} {LastName}";
 
         public string FullNameWithDocument => $"{FirstName} {LastName} - {Document}";
+
+        public double Latitude { get; set; }
+
+        public double Logitude { get; set; }
     }
 }

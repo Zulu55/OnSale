@@ -4,6 +4,7 @@ using OnSale.Common.Requests;
 using OnSale.Common.Responses;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -420,6 +421,58 @@ namespace OnSale.Common.Services
                     IsSuccess = false,
                     Message = ex.Message
                 };
+            }
+        }
+
+        public async Task<Stream> GetPictureAsync(string urlBase, string servicePrefix)
+        {
+            try
+            {
+                HttpClient client = new HttpClient
+                {
+                    BaseAddress = new Uri(urlBase),
+                };
+
+                string url = $"{servicePrefix}";
+                HttpResponseMessage response = await client.GetAsync(url);
+                Stream stream = await response.Content.ReadAsStreamAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return null;
+                }
+
+                return stream;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public async Task<RandomUsers> GetRandomUser(string urlBase, string servicePrefix)
+        {
+            try
+            {
+                HttpClient client = new HttpClient
+                {
+                    BaseAddress = new Uri(urlBase),
+                };
+
+                string url = $"{servicePrefix}";
+                HttpResponseMessage response = await client.GetAsync(url);
+                string result = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return null;
+                }
+
+                return JsonConvert.DeserializeObject<RandomUsers>(result);
+            }
+            catch
+            {
+                return null;
             }
         }
     }

@@ -32,5 +32,9 @@ namespace OnSale.Common.Requests
         public byte[] ImageArray { get; set; }
 
         public string PasswordConfirm { get; set; }
+
+        public double Latitude { get; set; }
+
+        public double Logitude { get; set; }
     }
 }

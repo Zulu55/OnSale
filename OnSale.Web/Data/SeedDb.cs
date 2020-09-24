@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OnSale.Common.Entities;
 using OnSale.Common.Enums;
+using OnSale.Common.Models;
+using OnSale.Common.Services;
 using OnSale.Web.Data.Entities;
 using OnSale.Web.Helpers;
 using System;
@@ -16,13 +18,15 @@ namespace OnSale.Web.Data
         private readonly DataContext _context;
         private readonly IUserHelper _userHelper;
         private readonly IBlobHelper _blobHelper;
+        private readonly IApiService _apiService;
         private readonly Random _random;
 
-        public SeedDb(DataContext context, IUserHelper userHelper, IBlobHelper blobHelper)
+        public SeedDb(DataContext context, IUserHelper userHelper, IBlobHelper blobHelper, IApiService apiService)
         {
             _context = context;
             _userHelper = userHelper;
             _blobHelper = blobHelper;
+            _apiService = apiService;
             _random = new Random();
         }
 
@@ -31,16 +35,88 @@ namespace OnSale.Web.Data
             await _context.Database.EnsureCreatedAsync();
             await CheckCountriesAsync();
             await CheckRolesAsync();
-            await CheckUserAsync("1010", "Juan", "Zuluaga", "jzuluaga55@hotmail.com", "322 311 4620", "Calle Luna Calle Sol", UserType.Admin);
+            await CheckUsersAsync();
             await CheckCategoriesAsync();
             await CheckProductsAsync();
+        }
+
+        private async Task CheckUsersAsync()
+        {
+            if (!_context.Users.Any())
+            {
+                await CheckAdminsAsync();
+                await CheckBuyersAsync();
+            }
+        }
+
+        private async Task CheckBuyersAsync()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                await CheckUserAsync($"200{i}", $"buyer{i}@yopmail.com", UserType.User);
+            }
+        }
+
+        private async Task CheckAdminsAsync()
+        {
+            await CheckUserAsync("1001", "admin1@yopmail.com", UserType.Admin);
+        }
+
+        private async Task<User> CheckUserAsync(
+            string document,
+            string email,
+            UserType userType)
+        {
+            RandomUsers randomUsers;
+
+            do
+            {
+                randomUsers = await _apiService.GetRandomUser("https://randomuser.me", "api");
+            } while (randomUsers == null);
+
+            Guid imageId = Guid.Empty;
+            RandomUser randomUser = randomUsers.Results.FirstOrDefault();
+            string imageUrl = randomUser.Picture.Large.ToString().Substring(22);
+            Stream stream = await _apiService.GetPictureAsync("https://randomuser.me", imageUrl);
+            if (stream != null)
+            {
+                imageId = await _blobHelper.UploadBlobAsync(stream, "users");
+            }
+
+            int cityId = _random.Next(1, _context.Cities.Count());
+            User user = await _userHelper.GetUserAsync(email);
+            if (user == null)
+            {
+                user = new User
+                {
+                    FirstName = randomUser.Name.First,
+                    LastName = randomUser.Name.Last,
+                    Email = email,
+                    UserName = email,
+                    PhoneNumber = randomUser.Cell,
+                    Address = $"{randomUser.Location.Street.Number}, {randomUser.Location.Street.Name}",
+                    Document = document,
+                    UserType = userType,
+                    City = await _context.Cities.FindAsync(cityId),
+                    ImageId = imageId,
+                    Latitude = double.Parse(randomUser.Location.Coordinates.Latitude),
+                    Logitude = double.Parse(randomUser.Location.Coordinates.Longitude)
+                };
+
+                await _userHelper.AddUserAsync(user, "123456");
+                await _userHelper.AddUserToRoleAsync(user, userType.ToString());
+                string token = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
+                await _userHelper.ConfirmEmailAsync(user, token);
+            }
+
+            return user;
         }
 
         private async Task CheckProductsAsync()
         {
             if (!_context.Products.Any())
             {
-                User user = await _userHelper.GetUserAsync("jzuluaga55@hotmail.com");
+                User user = await _userHelper.GetUserAsync("buyer1@yopmail.com");
                 Category mascotas = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Mascotas");
                 Category ropa = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Ropa");
                 Category tecnologia = await _context.Categories.FirstOrDefaultAsync(c => c.Name == "Tecnología");
@@ -119,41 +195,6 @@ namespace OnSale.Web.Data
         {
             await _userHelper.CheckRoleAsync(UserType.Admin.ToString());
             await _userHelper.CheckRoleAsync(UserType.User.ToString());
-        }
-
-        private async Task<User> CheckUserAsync(
-            string document,
-            string firstName,
-            string lastName,
-            string email,
-            string phone,
-            string address,
-            UserType userType)
-        {
-            User user = await _userHelper.GetUserAsync(email);
-            if (user == null)
-            {
-                user = new User
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    Email = email,
-                    UserName = email,
-                    PhoneNumber = phone,
-                    Address = address,
-                    Document = document,
-                    City = _context.Cities.FirstOrDefault(),
-                    UserType = userType
-                };
-
-                await _userHelper.AddUserAsync(user, "123456");
-                await _userHelper.AddUserToRoleAsync(user, userType.ToString());
-
-                string token = await _userHelper.GenerateEmailConfirmationTokenAsync(user);
-                await _userHelper.ConfirmEmailAsync(user, token);
-            }
-
-            return user;
         }
 
         private async Task CheckCountriesAsync()

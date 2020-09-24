@@ -91,7 +91,9 @@ namespace OnSale.Web.Helpers
                 PhoneNumber = model.PhoneNumber,
                 City = await _context.Cities.FindAsync(model.CityId),
                 UserName = model.Username,
-                UserType = userType
+                UserType = userType,
+                Latitude = model.Latitude,
+                Logitude = model.Logitude
             };
 
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);

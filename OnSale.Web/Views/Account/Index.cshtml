@@ -37,6 +37,12 @@
                                 @Html.DisplayNameFor(model => model.Address)
                             </th>
                             <th>
+                                @Html.DisplayNameFor(model => model.Latitude)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Logitude)
+                            </th>
+                            <th>
                                 @Html.DisplayNameFor(model => model.PhoneNumber)
                             </th>
                             <th>
@@ -47,29 +53,35 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.FullName)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.UserType)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Email)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.City.Name)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Address)
-                                </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                                </td>
-                                <td>
-                                    <img src="@item.ImageFullPath" style="width:80px;height:80px;border-radius:50%" />
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FullName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.City.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Latitude)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Logitude)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            </td>
+                            <td>
+                                <img src="@item.ImageFullPath" style="width:80px;height:80px;border-radius:50%" />
+                            </td>
+                        </tr>
                         }
                     </tbody>
                 </table>
