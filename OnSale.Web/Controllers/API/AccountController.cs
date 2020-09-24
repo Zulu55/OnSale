@@ -285,6 +285,7 @@ namespace OnSale.Web.Controllers.API
             user.LastName = request.LastName;
             user.Address = request.Address;
             user.PhoneNumber = request.Phone;
+            //TODO: Fix the document on the videos
             user.Document = request.Phone;
             user.City = city;
             user.ImageId = imageId;
