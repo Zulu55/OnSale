@@ -54,6 +54,7 @@ namespace OnSale.Prism.Droid
                     md.Update(signature.ToByteArray());
 
                     var hash = Convert.ToBase64String(md.Digest());
+                    System.Diagnostics.Debug.WriteLine($"**** My hash is: {hash} *** Fuck Yeah!!!!");
                 }
             }
             catch (NoSuchAlgorithmException e)
