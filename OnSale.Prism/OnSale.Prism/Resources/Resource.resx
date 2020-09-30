@@ -534,4 +534,7 @@
     <data name="ChangeOnSocialNetwork" xml:space="preserve">
     <value>Users registered by social networks, must change the photo or password on the social network.</value>
   </data>
+   <data name="Buyers" xml:space="preserve">
+    <value>Buyers</value>
+  </data>
 </root>

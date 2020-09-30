@@ -25,6 +25,7 @@ namespace OnSale.Prism.Droid
             base.OnCreate(savedInstanceState);
             FacebookClientManager.Initialize(this);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.FormsMaps.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             new SfBusyIndicatorRenderer();
             new SfRotatorRenderer();

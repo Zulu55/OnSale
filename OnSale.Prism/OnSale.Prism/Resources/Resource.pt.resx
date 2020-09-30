@@ -531,4 +531,7 @@
     <data name="ChangeOnSocialNetwork" xml:space="preserve">
     <value>Os usuários cadastrados nas redes sociais, devem alterar a foto ou senha na rede social.</value>
   </data>
+   <data name="Buyers" xml:space="preserve">
+    <value>Compradores</value>
+  </data>
 </root>

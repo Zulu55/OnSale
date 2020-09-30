@@ -80,6 +80,12 @@ namespace OnSale.Prism.ViewModels
                 },
                 new Menu
                 {
+                    Icon = "ic_location_on",
+                    PageName = $"{nameof(MapPage)}",
+                    Title = Languages.Buyers
+                },
+                new Menu
+                {
                     Icon = "ic_exit_to_app",
                     PageName = $"{nameof(LoginPage)}",
                     Title = Settings.IsLogin ? Languages.Logout : Languages.Login

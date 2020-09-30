@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using OnSale.Common.Entities;
@@ -14,6 +15,7 @@ using OnSale.Web.Data.Entities;
 using OnSale.Web.Helpers;
 using OnSale.Web.Models;
 using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -44,6 +46,15 @@ namespace OnSale.Web.Controllers.API
             _blobHelper = blobHelper;
             _mailHelper = mailHelper;
             _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetUsers()
+        {
+            List<User> users = await _context.Users
+                .Include(u => u.City)
+                .ToListAsync();
+            return Ok(users);
         }
 
         [HttpPost]
